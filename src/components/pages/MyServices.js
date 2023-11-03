@@ -45,7 +45,8 @@ export default function MyServices(){
                                     <h5 className="text-center header-margin">
                                         <strong>{
                                             getLang === "en" ? service.service_english :
-                                            getLang === "fr" ? service.service_french : service.service_arabic
+                                            getLang === "fr" ? service.service_french : getLang === "ar" ? service.service_arabic :
+                                            service.service_english 
                                         }</strong>
                                     </h5>
                                     <div className="text-center">
@@ -62,11 +63,12 @@ export default function MyServices(){
                                     <div className="card-body">
                                         <p className="card-text opacity-100">{
                                             getLang === "en" ? service.service_description_english :
-                                            getLang === "fr" ? service.service_description_french : service.service_description_arabic
+                                            getLang === "fr" ? service.service_description_french : getLang === "ar" ? service.service_description_arabic : service.service_description_english
                                         }<br/>
                                         {service.key === "Maintenance" && (getLang === "en" ? <strong>{service.service_bug_stacks_english}</strong> : 
                                             getLang === "fr" ? <strong>{service.service_bug_stacks_fernch}</strong> : 
-                                            <strong>{service.service_bug_stacks_arabic}</strong>) 
+                                            getLang === "ar" ? <strong>{service.service_bug_stacks_arabic}</strong> :
+                                            <strong>{service.service_bug_stacks_english}</strong>) 
                                         }</p>
                                     </div>
                                 </div>

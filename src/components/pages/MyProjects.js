@@ -22,7 +22,8 @@ export default function MyProjects(){
                                         {
                                             getLang === "en" ? project.project_name_english : 
                                             getLang === "fr" ? project.project_name_french :
-                                            project.project_name_arabic
+                                            getLang === "ar" ? project.project_name_arabic :
+                                            project.project_name_english
                                         }
                                     </h4>
                                 </div>
@@ -32,7 +33,8 @@ export default function MyProjects(){
                                     {
                                         getLang === "en" ? project.project_description_english : 
                                         getLang === "fr" ? project.project_description_french :
-                                        project.project_description_arabic
+                                        getLang === "ar" ? project.project_description_arabic :
+                                        project.project_description_english
                                     }
                                 </p>
                                 <h5>
