@@ -7,7 +7,7 @@ export default function About(){
     return(
         <div className="pt-4 pb-3" id="about">
             <div className="text-center header-section position-relative">
-                <h3 className="pb-3">{lang.about_header || uploadLang.about_header} Aimane Chnaif web-dev</h3>
+                <h3 className="pb-3">{lang.about_header || uploadLang.about_header} Aymane Chnaif web-dev</h3>
             </div>
             <div className="bg-white mt-4 p-3">
                 <div className="row justify-content-center align-items-center">
