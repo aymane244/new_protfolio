@@ -34,7 +34,9 @@ export default function SelectLang(){
             >
                 <div className={getLang === "ar" ? "pe-2" : "ps-2"}>
                     {getLang === "en" || lang === "en" ? (lang.english || uploadLang.english) : 
-                        getLang === "fr" || lang === "fr" ? (lang.french || uploadLang.french) : (lang.arabic || uploadLang.arabic)
+                        getLang === "fr" || lang === "fr" ? (lang.french || uploadLang.french) : 
+                        getLang === "ar" || lang === "ar" ? (lang.arabic || uploadLang.arabic) :
+                        (lang.english || uploadLang.english)
                     }
                 </div>
                 <div className={getLang === "ar" ? "fs-7 ps-2" : "fs-7 pe-2"}>
@@ -50,7 +52,10 @@ export default function SelectLang(){
                                 onClick={changeLang}
                             >
                                 <img src={flag} alt="" />
-                                {getLang === "en" || lang === "en" ? label_english : getLang === "fr" || lang === "fr" ? label_french : label_arabic}
+                                {getLang === "en" || lang === "en" ? label_english : 
+                                    getLang === "fr" || lang === "fr" ? label_french : 
+                                    getLang === "ar" || lang === "ar" ? label_arabic :
+                                    label_english}
                             </div>
                         ))}
                     </div>

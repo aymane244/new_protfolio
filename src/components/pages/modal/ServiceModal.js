@@ -21,7 +21,7 @@ export default function ServiceModal(){
         );
         if(selectedService){
             setTextKey(selectedService.key);
-            setService(getLang === "en" ? selectedService.service_english : getLang === "fr" ? selectedService.service_french : selectedService.service_arabic);
+            setService(getLang === "en" ? selectedService.service_english : getLang === "fr" ? selectedService.service_french : getLang === "ar" ? selectedService.service_arabic : selectedService.service_english);
         }else{
             setTextKey("");
             setService("");
@@ -33,7 +33,7 @@ export default function ServiceModal(){
         );
         if(selectedServiceModal !== ""){
             setSelectedServiceModal(selectedServiceModal);
-            setService(getLang === "en" ? selectedService.service_english : getLang === "fr" ? selectedService.service_french : selectedService.service_arabic);
+            setService(getLang === "en" ? selectedService.service_english : getLang === "fr" ? selectedService.service_french : getLang === "ar" ? selectedService.service_arabic : selectedService.service_english);
         }else{
             setService("");
             setSelectedServiceModal("");

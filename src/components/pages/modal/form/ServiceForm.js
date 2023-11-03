@@ -40,7 +40,7 @@ export default function ServiceFrom({ selectService, serviceDescription, setRest
                     <option value="" key="0">-- {lang.service_select || uploadLang.service_select} --</option>
                     {serviceDescription.map((service, index)=>(
                         <option value={service.key} key={index}>
-                            {getLang === "en" ? service.service_english : getLang === "fr" ? service.service_french : service.service_arabic}
+                            {getLang === "en" ? service.service_english : getLang === "fr" ? service.service_french : getLang === "ar" ? service.service_arabic : service.service_english}
                         </option>
                     ))}
                 </select>}
@@ -53,7 +53,7 @@ export default function ServiceFrom({ selectService, serviceDescription, setRest
                     {
                         <option value={selectedService.key} key={selectedService.key}>
                             {getLang === "en" ? selectedService.service_english : getLang === "fr" ? selectedService.service_french : 
-                            selectedService.service_arabic}
+                            getLang === "ar" ? selectedService.service_arabic : selectedService.service_english}
                         </option>
                     } 
                 </select>}

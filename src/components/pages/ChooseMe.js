@@ -14,10 +14,12 @@ export default function ChooseMe(){
             <div className="row">
                 <div className="col-md-3 mt-3">
                     <div className=
-                        {getLang === "ar" ? 
-                        "card shadow border-0 rounded-0 card-animation" : 
-                        "card pb-lg-4 shadow border-0 rounded-0 card-animation"
-                    }
+                        {   
+                            getLang === "en" ? "card pb-lg-4 shadow border-0 rounded-0 card-animation" : 
+                            getLang === "fr" ? "card pb-lg-5 shadow border-0 rounded-0 card-animation" :  
+                            getLang === "ar" ? "card shadow border-0 rounded-0 card-animation" : 
+                            "card pb-lg-4 shadow border-0 rounded-0 card-animation"
+                        }
                     >
                         <div className="card-body">
                             <h5><FontAwesomeIcon icon={faAward} className="fs-2 font-icon-color" /></h5>
@@ -44,9 +46,11 @@ export default function ChooseMe(){
                     </div>
                 </div>
                 <div className="col-md-3 mt-3">
-                    <div className={
-                            getLang === "ar" ? 
-                            "card shadow border-0 rounded-0 card-animation" : 
+                    <div className=
+                        {   
+                            getLang === "en" ? "card pb-lg-4 shadow border-0 rounded-0 card-animation" : 
+                            getLang === "fr" ? "card pb-lg-5 shadow border-0 rounded-0 card-animation" :  
+                            getLang === "ar" ? "card shadow border-0 rounded-0 card-animation" : 
                             "card pb-lg-4 shadow border-0 rounded-0 card-animation"
                         }
                     >
