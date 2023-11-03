@@ -10,7 +10,7 @@ export const french = {
     services : "Services",
     projects : "Projets",
     //banner
-    text_banner1 : "Bienvenue au site Aimane web-dev\nOù les rêves numériques prennent vie",
+    text_banner1 : "Bienvenue au site Aymane web-dev\nOù les rêves numériques prennent vie",
     text_banner2 : "Libérez votre potentiel en ligne\nAvec un développeur web expert",
     text_banner3 : "Prêt à valoriser votre présence en ligne ?\nConstruisons quelque chose d'extraordinaire ensemble.",
     button_banner : "Choisir votre service",
@@ -69,7 +69,7 @@ export const french = {
     functionalities : "Fonctionnalités",
     //about page
     about_header : "A propos de",
-    about_text : "Bonjour, je suis Aimane Chnaif, et je suis passionné par la concrétisation d'idées numériques. Avec une concentration dévouée sur la création de sites web impressionnants et d'applications mobiles dynamiques, j'ai trois années d'expérience avérée dans le monde du développement web full-stack et de la conception d'applications mobiles.",
+    about_text : "Bonjour, je suis Aymane Chnaif, et je suis passionné par la concrétisation d'idées numériques. Avec une concentration dévouée sur la création de sites web impressionnants et d'applications mobiles dynamiques, j'ai trois années d'expérience avérée dans le monde du développement web full-stack et de la conception d'applications mobiles.",
     about_text2 : "Je suis enthousiaste à l'idée d'entendre parler de vos idées de projet et de discuter de la façon dont je peux vous aider à atteindre vos objectifs. Que ce soit une refonte de site web, une nouvelle application mobile ou tout ce qui se trouve entre les deux, collaborons ensemble pour donner vie à votre vision.",
     skills : "Mes compétences clés",
     skill_fullStack : "Développement Web Full-Stack",
@@ -105,7 +105,7 @@ export const french = {
     hire_text_2 : "Je suis enthousiaste à l'idée d'entendre parler de vos idées de projet et de discuter de la manière dont je peux vous aider à atteindre vos objectifs.",
     hire_text_3 : "N'hésitez pas à me contacter aux coordonnées ci-dessous.",
     forntEnd : "Développement Front-end",
-    myName : "Aimane Chnaif",
+    myName : "Aymane Chnaif",
     fullStack : "Ingénieur full stack",
     //contact section
     contact : "Contact",

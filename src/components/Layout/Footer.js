@@ -11,7 +11,7 @@ export default function Footer(){
             <div className="container">
                 <div className="row py-3">
                     <div className="col-md-4 mt-3">
-                        <h5><strong>Aimane Web-dev</strong></h5>
+                        <h5><strong>Aymane Web-dev</strong></h5>
                         <p className="mt-5 fs-7">
                             <strong>{lang.phone || uploadLang.phone} : </strong> +212644776612 <br/>
                             <strong>{lang.service_contact_email || uploadLang.service_contact_email} : </strong> a.chnaif2010@gmail.com
@@ -101,7 +101,7 @@ export default function Footer(){
                 <div className="container py-4">
                     <p className="text-center">
                         <FontAwesomeIcon icon={faCopyright} className={getLang === "ar" ? "ms-1 fs-7" : "me-1 fs-7"} /> 
-                        {lang.copyright || uploadLang.copyright} <strong>Aimane web-dev</strong>. {lang.rights || uploadLang.rights}
+                        {lang.copyright || uploadLang.copyright} <strong>Aymane web-dev</strong>. {lang.rights || uploadLang.rights}
                     </p>
                 </div>
             </div>

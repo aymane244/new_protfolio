@@ -10,7 +10,7 @@ export const english = {
     services : "Services",
     projects : "Projects",
     //banner
-    text_banner1 : "Welcome to Aimane web-dev's website\nWhere digital dreams come to life",
+    text_banner1 : "Welcome to Aymane web-dev's website\nWhere digital dreams come to life",
     text_banner2 : "Unlock your online potential \nWith an expert web developer",
     text_banner3 : "Ready to elevate your web presence ? \nLet's build something extraordinary together.",
     button_banner : "Choose your service",
@@ -69,7 +69,7 @@ export const english = {
     functionalities : "Functionalities",
     //about page
     about_header : "About",
-    about_text : "Hello, I'm Aimane Chnaif, and I'm passionate about turning digital ideas into reality. With a dedicated focus on creating stunning websites and dynamic mobile applications, I have three years of proven experience in the world of full-stack web development and mobile app design.",
+    about_text : "Hello, I'm Aymane Chnaif, and I'm passionate about turning digital ideas into reality. With a dedicated focus on creating stunning websites and dynamic mobile applications, I have three years of proven experience in the world of full-stack web development and mobile app design.",
     about_text2 : "I'm excited to hear about your project ideas and discuss how I can help you achieve your goals. Whether it's a website revamp, a new mobile app, or anything in between, let's collaborate and bring your vision to life.",
     skills : "My key Skills",
     skill_fullStack : "Full-Stack Web Development",
@@ -105,7 +105,7 @@ export const english = {
     hire_text_2 : "I'm excited to hear about your project ideas and discuss how I can help you achieve your goals.",
     hire_text_3 : "Feel free to reach out to me at the contact information below.",
     forntEnd : "Front-end development",
-    myName : "Aimane Chnaif",
+    myName : "Aymane Chnaif",
     fullStack : "Full stack engineer",
     //contact section
     contact : "Contact",

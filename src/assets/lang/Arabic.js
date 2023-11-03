@@ -6,11 +6,11 @@ export const arabic = {
     //navbar
     loading : "جاري التحميل",
     home : "الرئيسية",
-    about : "من Aimane web-dev",
+    about : "من Aymane web-dev",
     services : "الخدمات",
     projects : "المشاريع",
     //banner
-    text_banner1 : "مرحبًا بكم في موقع Aimane web-dev \n حيث تترجم الأحلام الرقمية إلى واقع",
+    text_banner1 : "مرحبًا بكم في موقع Aymane web-dev \n حيث تترجم الأحلام الرقمية إلى واقع",
     text_banner2 : "حرروا إمكانياتكم على الإنترنت\n مع مطور ويب متخصص",
     text_banner3 : "هل أنتم مستعدون لتعزيز وجودكم على الويب؟\n لنقم ببناء شيء استثنائي معًا.",
     button_banner : "اختارو خدمتكم",

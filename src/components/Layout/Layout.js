@@ -9,7 +9,7 @@ export default function Layout(){
         <div dir={getLang === "ar" ? "rtl" : "ltr"}>
             <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top shadow">
                 <div className="container-fluid">
-                    <Link className="navbar-brand" to="/">Aimane Web-dev</Link>
+                    <Link className="navbar-brand" to="/">Aymane Web-dev</Link>
                     <button 
                         className="navbar-toggler" 
                         type="button" 
