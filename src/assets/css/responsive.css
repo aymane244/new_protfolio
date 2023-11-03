@@ -1,0 +1,111 @@
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px){
+    .w-nav{
+        width: 25%;
+    }
+    .font-service-style{
+        width: 18%;
+    }
+    .card-height{
+        height: 44vh;
+    }
+    .card-height-fr{
+        height: 48vh;
+    }
+    .card-margin{
+        margin-bottom: 13rem;
+    }
+    .card-margin-fr{
+        margin-bottom: 14.5rem;
+    }
+    .display-dot{
+        display: none;
+    }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px){
+    .w-nav{
+        width: 25%;
+    }
+    .font-service-style{
+        width: 15%;
+    }
+    .card-height{
+        height: 44vh;
+    }
+    .card-height-fr{
+        height: 44vh;
+    }
+    .card-margin{
+        margin-bottom: 13rem;
+    }
+    .card-margin-fr{
+        margin-bottom: 13.5rem;
+    }
+    .display-dot{
+        display: none;
+    }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px){
+    .font-service-style{
+        width: 39%;
+    }
+    .card-height{
+        height: 82vh;
+    }
+    .card-height-fr{
+        height: 100vh;
+    }
+    .card-margin{
+        margin-bottom: 28.5rem;
+    }
+    .card-margin-fr{
+        margin-bottom: 35rem;
+    }
+    .display-dot{
+        display: block;
+    }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px){
+    .w-nav{
+        width: 15%;
+    }
+    .font-service-style{
+        width: 28%;
+    }
+    .card-height{
+        height: 55vh;
+    }
+    .card-height-fr{
+        height: 67vh;
+    }
+    .card-margin{
+        margin-bottom: 18rem;
+    }
+    .card-margin-fr{
+        margin-bottom: 22.5rem;
+    }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px){
+    .w-nav{
+        width: 15%;
+    }
+    .font-service-style{
+        width: 23%;
+    }
+    .card-height{
+        height: 50vh;
+    }
+    .card-height-fr{
+        height: 55vh;
+    }
+    .card-margin{
+        margin-bottom: 15.5rem;
+    }
+    .card-margin-fr{
+        margin-bottom: 17.5rem;
+    }
+}
