@@ -11,7 +11,14 @@ export default function AccordionLanguages({getLang, lang, uploadLang}){
         <div className="accordion" id="accordionPanelsStayOpenExample">
             <div className="accordion-item">
                 <h2 className="accordion-header" onClick={()=>setShowSkill1(!showSkill1)}>
-                    <button className={getLang === "ar" ? "accordion-button accordion-button-ar" : "accordion-button"} type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="true" aria-controls="panelsStaySix-collapseSix">
+                    <button 
+                        className={getLang === "ar" ? "accordion-button accordion-button-ar collapsed" : "accordion-button collapsed"} 
+                        type="button" 
+                        data-bs-toggle="collapse" 
+                        data-bs-target="#panelsStayOpen-collapseSix" 
+                        aria-expanded="false" 
+                        aria-controls="panelsStaySix-collapseSix"
+                    >
                         <div className={getLang === "ar" ? "d-flex justify-content-between w-100" : ""}>
                             <div>
                                 <FontAwesomeIcon 
@@ -26,7 +33,7 @@ export default function AccordionLanguages({getLang, lang, uploadLang}){
                         </div>
                     </button>
                 </h2>
-                <div id="panelsStayOpen-collapseSix" className="accordion-collapse collapse show">
+                <div id="panelsStayOpen-collapseSix" className="accordion-collapse collapse">
                     <div className="accordion-body text-start text-justify">
                         <ul>
                             <li><strong>HTML, CSS, Bootstrap</strong></li>
@@ -48,12 +55,14 @@ export default function AccordionLanguages({getLang, lang, uploadLang}){
                         aria-controls="panelsStayOpen-collapseSeven"
                     >
                         <div className={getLang === "ar" ? "d-flex justify-content-between w-100" : ""}>
-                            <div>
-                                <FontAwesomeIcon 
-                                    icon={faCheckDouble} 
-                                    className={getLang === "ar" ? "font-icon-color ms-2" : "font-icon-color me-2"}
-                                />
-                                <strong> {lang.backEnd || uploadLang.backEnd}</strong>
+                            <div className="d-flex">
+                                <span>
+                                    <FontAwesomeIcon 
+                                        icon={faCheckDouble} 
+                                        className={getLang === "ar" ? "font-icon-color ms-2" : "font-icon-color me-2"}
+                                    />
+                                </span>
+                                <span><strong>{lang.backEnd || uploadLang.backEnd}</strong></span>
                             </div>
                             <div>
                                 {getLang === "ar" && (!showSkill2 ? <FontAwesomeIcon icon={faChevronDown} /> : <FontAwesomeIcon icon={faChevronUp} />)}
