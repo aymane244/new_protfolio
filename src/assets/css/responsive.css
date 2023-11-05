@@ -7,16 +7,10 @@
         width: 18%;
     }
     .card-height{
-        height: 44vh;
-    }
-    .card-height-fr{
-        height: 48vh;
+        height: 40vh;
     }
     .card-margin{
         margin-bottom: 13rem;
-    }
-    .card-margin-fr{
-        margin-bottom: 14.5rem;
     }
     .display-dot{
         display: none;
@@ -31,16 +25,10 @@
         width: 15%;
     }
     .card-height{
-        height: 44vh;
-    }
-    .card-height-fr{
-        height: 44vh;
+        height: 40vh;
     }
     .card-margin{
         margin-bottom: 13rem;
-    }
-    .card-margin-fr{
-        margin-bottom: 13.5rem;
     }
     .display-dot{
         display: none;
@@ -52,16 +40,10 @@
         width: 39%;
     }
     .card-height{
-        height: 82vh;
-    }
-    .card-height-fr{
-        height: 100vh;
+        height: 75vh;
     }
     .card-margin{
         margin-bottom: 28.5rem;
-    }
-    .card-margin-fr{
-        margin-bottom: 35rem;
     }
     .display-dot{
         display: block;
@@ -76,16 +58,10 @@
         width: 28%;
     }
     .card-height{
-        height: 55vh;
-    }
-    .card-height-fr{
-        height: 67vh;
+        height: 50vh;
     }
     .card-margin{
         margin-bottom: 18rem;
-    }
-    .card-margin-fr{
-        margin-bottom: 22.5rem;
     }
 }
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -97,15 +73,9 @@
         width: 23%;
     }
     .card-height{
-        height: 50vh;
-    }
-    .card-height-fr{
-        height: 55vh;
+        height: 45vh;
     }
     .card-margin{
         margin-bottom: 15.5rem;
-    }
-    .card-margin-fr{
-        margin-bottom: 17.5rem;
     }
 }

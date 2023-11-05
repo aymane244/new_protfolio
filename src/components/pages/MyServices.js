@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { serviceDescription } from "../data/ServiceDescription";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBagShopping, faBriefcase, faCommentDots, faFileCode, faFileLines, faGraduationCap, faMobileScreenButton, faScrewdriverWrench } from "@fortawesome/free-solid-svg-icons";
@@ -6,26 +6,34 @@ import { faWordpress } from "@fortawesome/free-brands-svg-icons";
 import { Lang } from "../../context/LangContext";
 import ServiceModal from "./modal/ServiceModal";
 import { ContextServices } from "../../context/ServiceContext";
+import { useInView } from "react-intersection-observer";
 
 export default function MyServices(){
     const {getLang, lang, uploadLang} = useContext(Lang);
     const {selectServiceModal} = useContext(ContextServices);
+    const [ref, inView] = useInView({
+        triggerOnce: true,
+    });
+    useEffect(()=>{
+        if(inView){
+            const elements = document.querySelectorAll('.slide-in');
+            elements.forEach((element)=>{
+                element.classList.add('slide-in-visible');
+            });
+        }
+    }, [inView]);
     return(
-        <div className="pt-4 pb-3" id="services">
+        <div ref={ref} className="pt-5 slide-in" id="services">
             <div className="text-center header-section position-relative">
-                <h3 className="pb-3">{lang.my_services || uploadLang.my_services}</h3>
+                <h3 className="pb-2">{lang.my_services || uploadLang.my_services}</h3>
             </div>
             <div className="row">
                 {serviceDescription.map((service, index)=>(
                     <div className="col-md-4 mt-3" key={service.key}>
-                        <div className={
-                            getLang === "fr" ? "card position-relative card-margin-fr border-0" : "card position-relative card-margin border-0"
-                        }>
+                        <div className="card position-relative card-margin border-0">
                             <div className="div-card-hover rounded">
                                 <img src={service.image} className="card-img-top h-img" alt={service.image_alt}/>
-                                <div className={
-                                    getLang === "fr" ? "card-div-position mx-4 pb-5 card-height-fr" : "card-div-position mx-4 pb-5 card-height"
-                                }>
+                                <div className="card-div-position mx-4 pb-5 card-height">
                                     <div className="text-center font-service-style mx-auto">
                                         <FontAwesomeIcon 
                                             icon={

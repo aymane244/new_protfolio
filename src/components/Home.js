@@ -15,9 +15,9 @@ export default function Home(){
             <div style={{ backgroundColor : "#F3F5FA" }}>
                 <div className="container-fluid">
                     <About/>
-                    <ChooseMe/>
                 </div>
                 <div className="container">
+                    <ChooseMe/>
                     <MyServices/>
                     <MyProjects/>
                     <HireMe/>

@@ -44,33 +44,35 @@ export default function SelectLang(){
                 </div>
                 {showLang && <div className="position-absolute border border-top-0 w-100 shadow z-3 bg-white position-select text-start" ref={containerDivLang}>
                     <div className="dropdown-hover-select">
-                        {language.filter(({code})=>code !== getLang).map(({code, flag, label_english, label_french, label_arabic})=>(
+                        {getLang === null ? language.filter(({code})=>code !== "en").map(({flag, label_english})=>(
+                            <div 
+                                key="en" 
+                                className="d-flex justify-content-between px-2" 
+                                id="en"
+                                onClick={changeLang}
+                            >
+                                <img src={flag} alt="en" />
+                                {label_english}
+                            </div>
+                        )) : language.filter(({code})=>code !== getLang).map(({code, flag, label_english, label_french, label_arabic})=>(
                             <div 
                                 key={code} 
                                 className="d-flex justify-content-between px-2" 
                                 id={code}
                                 onClick={changeLang}
                             >
-                                <img src={flag} alt="" />
-                                {getLang === "en" || lang === "en" ? label_english : 
+                                <img src={flag} alt={code} />
+                                {
+                                    getLang === "en" || lang === "en" ? label_english : 
                                     getLang === "fr" || lang === "fr" ? label_french : 
                                     getLang === "ar" || lang === "ar" ? label_arabic :
-                                    label_english}
+                                    label_english            
+                                }
                             </div>
                         ))}
                     </div>
                 </div>}
             </div>
-            {/* <select defaultValue={getLang} onChange={changeLang}>
-                {language.map(({code, label_english, label_french, label_arabic})=>(
-                    <option 
-                        value={code} 
-                        key={code} 
-                    >
-                        {getLang === "en" || lang === "eng" ? label_english : getLang === "fr" || lang === "fr" ? label_french : label_arabic}
-                    </option>
-                ))}
-            </select> */}
         </div>
     )
 }

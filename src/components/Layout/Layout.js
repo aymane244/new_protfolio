@@ -9,7 +9,7 @@ export default function Layout(){
         <div dir={getLang === "ar" ? "rtl" : "ltr"}>
             <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top shadow">
                 <div className="container-fluid">
-                    <Link className="navbar-brand" to="/">Aymane Web-dev</Link>
+                    <Link className="navbar-brand" to="/">Aymane Web-Dev</Link>
                     <button 
                         className="navbar-toggler" 
                         type="button" 
@@ -36,7 +36,7 @@ export default function Layout(){
                                 <a href="#projects" className="nav-link text-black">{lang.projects || uploadLang.projects}</a>
                             </li>
                             <li className="nav-item">
-                                <a href="#contact" className="nav-link text-black">{lang.contact || uploadLang.contact}</a>
+                                <a href="#contact" className="nav-link text-black">{lang.contact_nav || uploadLang.contact_nav}</a>
                             </li>
                         </ul>
                         <div className="px-lg-3 w-nav">

@@ -135,7 +135,8 @@ export default function ServiceModal(){
                             </div>
                         </form>
                     </div>
-                    <div className="modal-footer">
+                    <div className="modal-footer d-flex justify-content-between">
+                        <p className="text-secondary">{lang.next_text || uploadLang.next_text}</p>
                         <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">
                             {lang.close || uploadLang.close}
                         </button>

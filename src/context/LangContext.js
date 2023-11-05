@@ -9,7 +9,7 @@ export default function LangContext(){
     const getLang = localStorage.getItem('lang');
     const [lang, setLang] = useState(getLang || "en");
     const [loading, setLoading] = useState(false);
-    const uploadLang = getLang === "en" || lang === "en" ? english : getLang === "fr" || lang === "fr" ? french : arabic
+    const uploadLang = getLang === "en" || lang === "en" ? english : getLang === "fr" || lang === "fr" ? french : arabic;
     function changeLang(event){
         setLoading(true);
         setLang(event.target.id === "en" ? english : event.target.id === "fr" ? french : arabic);

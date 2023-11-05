@@ -13,14 +13,7 @@ export default function Accordion({getLang, lang, uploadLang}){
         <div className="accordion" id="accordionPanelsStayOpenExample">
             <div className="accordion-item">
                 <h2 className="accordion-header" onClick={()=>setShowSkill1(!showSkill1)}>
-                    <button 
-                        className={getLang === "ar" ? "accordion-button accordion-button-ar" : "accordion-button"}
-                        type="button" 
-                        data-bs-toggle="collapse" 
-                        data-bs-target="#panelsStayOpen-collapseOne" 
-                        aria-expanded="true" 
-                        aria-controls="panelsStayOpen-collapseOne"
-                    >
+                    <button className={getLang === "ar" ? "accordion-button accordion-button-ar" : "accordion-button"} type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
                         <div className={getLang === "ar" ? "d-flex justify-content-between w-100" : ""}>
                             <div>
                                 <FontAwesomeIcon 

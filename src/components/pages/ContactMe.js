@@ -1,16 +1,28 @@
 import { faBookOpen, faEnvelope, faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Lang } from "../../context/LangContext";
+import { useInView } from "react-intersection-observer";
 
 export default function ContactMe(){
     const {lang, getLang, uploadLang} = useContext(Lang);
+    const [ref, inView] = useInView({
+        triggerOnce: true,
+    });
+    useEffect(()=>{
+        if(inView){
+            const elements = document.querySelectorAll('.slide-in_contact');
+            elements.forEach((element)=>{
+                element.classList.add('slide-in-visible');
+            });
+        }
+    }, [inView]);
     return(
-        <div className="pt-4 pb-3" id="contact">
+        <div ref={ref} className="py-5 slide-in_contact" id="contact">
             <div className="text-center header-section position-relative">
-                <h3 className="pb-3">{lang.contact || uploadLang.contact}</h3>
+                <h3 className="pb-2">{lang.contact || uploadLang.contact}</h3>
             </div>
-            <div className="row justify-content-center bg-white shadow p-5">
+            <div className="row justify-content-center bg-white shadow p-5 mt-3">
                 <div className="col-md-10">
                     <form>    
                         <div className="row">

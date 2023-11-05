@@ -1,26 +1,31 @@
 import { faAward, faBookOpenReader, faBusinessTime, faComments } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import React, { useEffect } from "react";
 import { useContext } from "react";
 import { Lang } from "../../context/LangContext";
+import { useInView } from "react-intersection-observer";
 
 export default function ChooseMe(){
     const {lang, getLang, uploadLang} = useContext(Lang);
+    const [ref, inView] = useInView({
+        triggerOnce: true,
+    });
+    useEffect(()=>{
+        if(inView){
+            const elements = document.querySelectorAll('.fade-in_about');
+            elements.forEach((element)=>{
+                element.classList.add('fade-in-visible');
+            });
+        }
+    }, [inView]);
     return(
-        <div className="pt-4 pb-3">
+        <div ref={ref} className="pt-5 fade-in_about">
             <div className="text-center header-section position-relative">
-                <h3 className="pb-3">{lang.wokr_with_me || uploadLang.wokr_with_me}</h3>
+                <h3 className="pb-2">{lang.wokr_with_me || uploadLang.wokr_with_me}</h3>
             </div>
             <div className="row">
-                <div className="col-md-3 mt-3">
-                    <div className=
-                        {   
-                            getLang === "en" ? "card pb-lg-4 shadow border-0 rounded-0 card-animation" : 
-                            getLang === "fr" ? "card pb-lg-5 shadow border-0 rounded-0 card-animation" :  
-                            getLang === "ar" ? "card shadow border-0 rounded-0 card-animation" : 
-                            "card pb-lg-4 shadow border-0 rounded-0 card-animation"
-                        }
-                    >
+                <div className="col-md-6 mt-3">
+                    <div className="card pb-lg-5 shadow border-0 rounded-0 card-animation">
                         <div className="card-body">
                             <h5><FontAwesomeIcon icon={faAward} className="fs-2 font-icon-color" /></h5>
                             <h5 className="card-title">
@@ -30,12 +35,8 @@ export default function ChooseMe(){
                         </div>
                     </div>
                 </div>
-                <div className="col-md-3 mt-3">
-                    <div className={getLang === "ar" ? 
-                            "card shadow border-0 rounded-0 card-animation" : 
-                            "card pb-lg-4 shadow border-0 rounded-0 card-animation"
-                        }
-                    >
+                <div className="col-md-6 mt-3">
+                    <div className="card pb-lg-5 shadow border-0 rounded-0 card-animation">
                         <div className="card-body">
                             <h5><FontAwesomeIcon icon={faComments} className="fs-2 font-icon-color" /></h5>
                             <h5 className="card-title">
@@ -45,15 +46,8 @@ export default function ChooseMe(){
                         </div>
                     </div>
                 </div>
-                <div className="col-md-3 mt-3">
-                    <div className=
-                        {   
-                            getLang === "en" ? "card pb-lg-4 shadow border-0 rounded-0 card-animation" : 
-                            getLang === "fr" ? "card pb-lg-5 shadow border-0 rounded-0 card-animation" :  
-                            getLang === "ar" ? "card shadow border-0 rounded-0 card-animation" : 
-                            "card pb-lg-4 shadow border-0 rounded-0 card-animation"
-                        }
-                    >
+                <div className="col-md-6 mt-3">
+                    <div className="card pb-lg-5 shadow border-0 rounded-0 card-animation">
                         <div className="card-body">
                             <h5><FontAwesomeIcon icon={faBusinessTime} className="fs-2 font-icon-color" /></h5>
                             <h5 className="card-title">
@@ -63,8 +57,13 @@ export default function ChooseMe(){
                         </div>
                     </div>
                 </div>
-                <div className="col-md-3 mt-3">
-                    <div className="card shadow border-0 rounded-0 card-animation">
+                <div className="col-md-6 mt-3">
+                    <div className=
+                        {
+                            getLang === "ar" ? "card pb-lg-5 shadow border-0 rounded-0 card-animation" : 
+                            "card pb-lg-4 shadow border-0 rounded-0 card-animation"
+                        }
+                    >
                         <div className="card-body">
                             <h5><FontAwesomeIcon icon={faBookOpenReader} className="fs-2 font-icon-color" /></h5>
                             <h5 className="card-title">
