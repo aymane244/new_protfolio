@@ -40,7 +40,7 @@ export default function AllServicesPrice(){
                         <strong><FontAwesomeIcon icon={faMoneyCheckDollar} /> {lang.initial_price || uploadLang.initial_price}: </strong><br />
                         {((textKey === "Portfolio/Business" || textKey === "Application") || 
                             (selectedServiceModal === "Portfolio/Business" || selectedServiceModal === "Application")) && 
-                            <span className="form-text" id="basic-addon4">
+                            <span className="form-text px-5" id="basic-addon4">
                                 * {lang.initial_price_text || uploadLang.initial_price_text} <br/>
                                 {(textKey === "Application" || selectedServiceModal === "Application") ? 
                                     (lang.initial_price_text_application || uploadLang.initial_price_text_application) : ""

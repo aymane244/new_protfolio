@@ -37,7 +37,7 @@
         display: none;
     }
     .banner{
-        height: 100vh;
+        height: 93vh;
     }
 }
 /* Medium devices (landscape tablets, 768px and up) */
@@ -55,7 +55,7 @@
         display: block;
     }
     .banner{
-        height: 100vh;
+        height: 95vh;
     }
 }
 /* Large devices (laptops/desktops, 992px and up) */
