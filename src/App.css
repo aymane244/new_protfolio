@@ -267,8 +267,7 @@ body{
   opacity: 1;
 }
 .text{
-  color: white;
-  position: absolute;
+  height: 100%;
 }
 .h_card{
   height: 300px;
