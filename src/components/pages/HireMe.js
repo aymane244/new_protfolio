@@ -36,8 +36,8 @@ export default function HireMe(){
                 <hr/>
                 <div className="col-md-12 px-5 py-3 text-center">
                     <div className="d-flex justify-content-center align-items-center">
-                        <div className="img-size">
-                            <img src="/images/aimane.png" alt="aimane-profile" className="img-thumbnail rounded-circle" />
+                        <div>
+                            <img src="/images/aimane.png" alt="aimane-profile" className="img-fluid img-thumbnail img-size" />
                         </div>
                         <div className="ms-3">
                             <h4 className="text-color">{lang.myName || uploadLang.myName}</h4>
