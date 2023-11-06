@@ -53,7 +53,7 @@ export const projects = [
         id : 3,
         image : "./images/school_management.png",
         image_alt : "project-school-management",
-        link : "https://maurigo.com/",
+        link : "",
         project_technologies : "PHP, Javascript, Jquery, CSS3, Bootstrap, Ajax, SQL, MySQL",
         project_name_english : "School management app",
         project_name_french : "Application de gestion d'école",
