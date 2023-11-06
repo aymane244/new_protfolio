@@ -58,8 +58,10 @@ export default function ServiceFrom({ selectService, serviceDescription, setRest
                     } 
                 </select>}
             </div>
-            {(textKey !== "" && textKey !== "Plugin" && textKey !== "Maintenance") && <div className="form-text" id="basic-addon4">
-                * {lang.service_select_text || uploadLang.service_select_text}
+            {(textKey !== "" && textKey !== "Plugin" && textKey !== "Maintenance") && 
+            <div className="form-text d-flex" id="basic-addon4">
+               <span className="pe-2">*</span>
+               <span>{lang.service_select_text || uploadLang.service_select_text}</span>
             </div>}
         </div>
     )

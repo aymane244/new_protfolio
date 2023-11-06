@@ -343,3 +343,6 @@ html{
   opacity: 1;
   transform: translateX(0);
 }
+.w-title{
+  width: 51%;
+}

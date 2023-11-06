@@ -7,6 +7,7 @@ import { Lang } from "../../../../context/LangContext";
 export default function FuncionalitiesPrice(){
     const {sum, services} = useContext(ContextServices);
     const {lang, uploadLang} = useContext(Lang);
+    console.log(services[3].type);
     function capitalizeFirstLetter(str){
         if(str.includes("\n")){
             const lines = str.split("\n");
@@ -20,14 +21,15 @@ export default function FuncionalitiesPrice(){
     }
     return(
         <div className="d-flex justify-content-between align-items-center">
-            <div className="me-2">
-                <span><strong><FontAwesomeIcon icon={faListCheck} /> {lang.functionalities || uploadLang.functionalities}:</strong></span>
+            <div className="me-2 d-flex">
+                <span className="me-2"><FontAwesomeIcon icon={faListCheck} /></span> 
+                <span><strong>{lang.functionalities || uploadLang.functionalities}:</strong></span>
             </div>
             <div>
                 {services.map((service, index)=>(<div key={index}>  
                     <span className="wrap">
-                        <strong>
-                            {service.servicePrice > 0 ? "- "+service.service : ""} {service.servicePrice > 0 ? "("+service.servicePrice : ""} 
+                        <strong className="d-flex">
+                            {service.servicePrice > 0 && <span className="me-2">-</span>} {service.servicePrice > 0 ? service.service : ""} {service.servicePrice > 0 ? "("+service.servicePrice : ""} 
                             {service.servicePrice > 0 ? (lang.dollar || uploadLang.dollar)+")" : ""}
                             {service.type === "other" && capitalizeFirstLetter(service.service)}
                         </strong>
