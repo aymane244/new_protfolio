@@ -266,12 +266,6 @@ body{
 .overlay:hover{
   opacity: 1;
 }
-.text{
-  height: 100%;
-}
-.h_card{
-  height: 300px;
-}
 .footer-style{
   background-color: #485664;
 }
