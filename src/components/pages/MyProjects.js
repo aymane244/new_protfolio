@@ -84,7 +84,7 @@ export default function MyProjects(){
                                             }
                                         </li>
                                     </ul>
-                                    <h5 className="text-center mt-5">
+                                    <h5 className="text-center">
                                         {project.link !== "" ? 
                                             <a href={project.link} target="_blank" rel="noreferrer" className="text-white text-decoration-none border border-white py-2 px-5">
                                                 {lang.link_project || uploadLang.link_project}
