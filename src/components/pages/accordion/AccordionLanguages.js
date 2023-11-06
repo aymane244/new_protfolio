@@ -20,12 +20,14 @@ export default function AccordionLanguages({getLang, lang, uploadLang}){
                         aria-controls="panelsStaySix-collapseSix"
                     >
                         <div className={getLang === "ar" ? "d-flex justify-content-between w-100" : ""}>
-                            <div>
-                                <FontAwesomeIcon 
-                                    icon={faCheckDouble} 
-                                    className={getLang === "ar" ? "font-icon-color ms-2" : "font-icon-color me-2"}
-                                />
-                                <strong>{lang.forntEnd || uploadLang.forntEnd}</strong>
+                            <div className="d-flex">
+                                <span>
+                                    <FontAwesomeIcon 
+                                        icon={faCheckDouble} 
+                                        className={getLang === "ar" ? "font-icon-color ms-2" : "font-icon-color me-2"}
+                                    />
+                                </span>
+                                <span><strong>{lang.forntEnd || uploadLang.forntEnd}</strong></span>
                             </div>
                             <div>
                                 {getLang === "ar" && (showSkill1 ? <FontAwesomeIcon icon={faChevronDown} /> : <FontAwesomeIcon icon={faChevronUp} />)}

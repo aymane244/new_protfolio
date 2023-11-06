@@ -1,14 +1,50 @@
 import { faBookOpen, faEnvelope, faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Lang } from "../../context/LangContext";
 import { useInView } from "react-intersection-observer";
+import axios from "axios";
 
 export default function ContactMe(){
     const {lang, getLang, uploadLang} = useContext(Lang);
     const [ref, inView] = useInView({
         triggerOnce: true,
     });
+    const [message, setMessage] = useState({
+        fullName : "",
+        email : "",
+        subject : "",
+        message : "",
+        document : "",
+        error: [],
+    })
+    function handleMessage(event){
+        const{name, files, value, type} = event.target;
+        setMessage(formData => ({
+            ...formData,
+            [name]: type === "file" ? files[0] : value
+        }))
+    }
+    function submitMessage(event){
+        event.preventDefault();
+        const data = new FormData();
+        data.append("fullName", message.fullName);
+        data.append("email", message.email);
+        data.append("subject", message.subject);
+        data.append("message", message.message);
+        data.append("document", message.document);
+        data.append("language", lang);
+        axios.post("http://127.0.0.1:8000/api/send_message", data).then(response=>{
+            if(response.data.status === 400){
+                setMessage(errors =>({
+                    ...errors,
+                    error: response.data.message_errors,
+                }))
+            }else if(response.data.status === 200){
+                console.log(response.data.message);
+            }
+        })
+    }
     useEffect(()=>{
         if(inView){
             const elements = document.querySelectorAll('.slide-in_contact');
@@ -24,7 +60,7 @@ export default function ContactMe(){
             </div>
             <div className="row justify-content-center bg-white shadow p-5 mt-3">
                 <div className="col-md-10">
-                    <form>    
+                    <form onSubmit={submitMessage} encType="multipart/form-data">    
                         <div className="row">
                             <div className="col-md-6 mb-3">
                                 <label htmlFor="full_name" className="form-label">{lang.fullName || uploadLang.fullName}</label>
@@ -35,11 +71,15 @@ export default function ContactMe(){
                                     />
                                     <input 
                                         type="text" 
+                                        name="fullName"
                                         className={getLang === "ar" ? "form-control pe-5" : "form-control ps-5"} 
-                                        id="full_name" 
+                                        id="fullName" 
                                         placeholder={lang.fullName_placeholder || uploadLang.fullName_placeholder}
+                                        onChange={handleMessage}
+                                        value={message.fullName}
                                     />
                                 </div>
+                                <div className="text-danger">{message.error.fullName}</div>
                             </div>
                             <div className="col-md-6 mb-3">
                                 <label htmlFor="email" className="form-label">
@@ -52,10 +92,15 @@ export default function ContactMe(){
                                     />
                                     <input 
                                         type="email" 
+                                        name="email"
+                                        id="email"
                                         className={getLang === "ar" ? "form-control pe-5" : "form-control ps-5"} 
                                         placeholder={lang.service_contact_email_placeholder || uploadLang.service_contact_email_placeholder}
+                                        onChange={handleMessage}
+                                        value={message.email}
                                     />
                                 </div>
+                                <div className="text-danger">{message.error.email}</div>
                             </div>
                             <div className="col-md-12 mb-3">
                                 <label htmlFor="subject" className="form-label">{lang.subject || uploadLang.subject}</label>
@@ -66,24 +111,38 @@ export default function ContactMe(){
                                     />
                                     <input 
                                         type="text" 
+                                        name="subject"
                                         className={getLang === "ar" ? "form-control pe-5" : "form-control ps-5"} 
                                         id="subject" 
                                         placeholder={lang.subject || uploadLang.subject}
+                                        onChange={handleMessage}
+                                        value={message.subject}
                                     />
                                 </div>
+                                <div className="text-danger">{message.error.subject}</div>
                             </div>
                             <div className="col-md-12 mb-3">
                                 <label htmlFor="message" className="form-label">{lang.message || uploadLang.message}</label>
-                                <textarea className="form-control" id="message" rows="5"></textarea>
+                                <textarea 
+                                    className="form-control" 
+                                    id="message" 
+                                    rows="5" 
+                                    name="message" 
+                                    onChange={handleMessage}
+                                    value={message.message}
+                                >
+                                </textarea>
+                                <div className="text-danger">{message.error.message}</div>
                             </div>
                             <div className="col-md-12 mb-3">
                                 <label htmlFor="document" className="form-label">
                                     {lang.file || uploadLang.file} ({lang.optionnal || uploadLang.optionnal})
                                 </label>
-                                <input className="form-control" type="file" id="document"/>
+                                <input className="form-control" type="file" id="document" name="document" onChange={handleMessage}/>
                                 <div id="document_help" className="form-text">
                                     {lang.file_text || uploadLang.file_text}
                                 </div>
+                                <div className="text-danger">{message.error.document}</div>
                             </div>
                             <div className="text-center">
                                 <button type="submit" className="btn btn-primary">{lang.send_message || uploadLang.send_message}</button>

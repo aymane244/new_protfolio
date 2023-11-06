@@ -12,7 +12,7 @@ import AllServicesPrice from "./prices/AllServicesPrice";
 
 export default function ServiceModal(){
     const {getLang, lang, uploadLang} = useContext(Lang);
-    const {textKey, setTextKey, ecommerceService, selectedServiceModal, setSelectedServiceModal, contact, setContact, nextForm, setNextForm} = useContext(ContextServices);
+    const {textKey, setTextKey, ecommerceService, selectedServiceModal, setSelectedServiceModal, contact, setContact, nextForm, setNextForm, phone, setPhone, pageNumber, value} = useContext(ContextServices);
     const [service, setService] = useState("");
     const [restServices, setRestServices] = useState("");
     function selectService(event){
@@ -53,6 +53,9 @@ export default function ServiceModal(){
             ...formData,
             [event.target.name] : event.target.value
         }))
+    }
+    function handlePhoneForm(value){
+        setPhone(value);
     }
     return(
         <div className="modal fade" id="service" tabIndex="-1" aria-labelledby="serviceLabel" aria-hidden="true">
@@ -112,7 +115,9 @@ export default function ServiceModal(){
                                     {!nextForm && 
                                         <ContactForm
                                             handleContactForm = {handleContactForm}
+                                            handlePhoneForm = {handlePhoneForm}
                                             contact = {contact}
+                                            phone = {phone}
                                         />
                                     }
                                     {((textKey !== "" || selectedServiceModal !== "") && nextForm) && 

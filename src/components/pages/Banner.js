@@ -22,7 +22,7 @@ export default function Banner(){
                     <div className="carousel-item active">
                         <div className="position-absolute top-0 start-0 bg-dark opacity-50 w-100 h-100"></div>
                         <img src="/images/business.jpg" className="d-block w-100 banner" alt="1"/>
-                        <div className="position-absolute top-50 w-100 mx-auto px-3">
+                        <div className="position-absolute w-100 mx-auto px-3" style={{ top : "40%"}}>
                             <div className="d-flex justify-content-center text-fade">
                                 {getLang === "ar" ? 
                                     <h1 className="text-white display-5"><FontAwesomeIcon icon={faQuoteRightAlt} /></h1> : 

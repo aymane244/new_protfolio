@@ -2,23 +2,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useContext } from "react";
 import { faUser, faEnvelope} from "@fortawesome/free-solid-svg-icons";
 import { Lang } from "../../../../context/LangContext";
-import { useState } from "react";
 import 'react-phone-number-input/style.css'
 import PhoneInputWithCountrySelect from "react-phone-number-input";
 
-export default function ContactForm({contact, handleContactForm}){
+export default function ContactForm({contact, handleContactForm, phone, handlePhoneForm}){
     const {getLang, lang, uploadLang} = useContext(Lang);
-    const [phone , setPhone] = useState("");
-    const [valid , setValid] = useState(true);
-    console.log(valid);
-    function handlePhoneForm(value){
-        setPhone(value);
-        setValid(ValidePhoneNumber(value));
-    }
-    function ValidePhoneNumber(phoneNumber){
-        const phonePattern = /^\d{12}$/;
-        return phonePattern.test(phoneNumber);
-    }
     return(
         <div className="row">
             <div className="col-md-6 mb-3">
@@ -59,15 +47,16 @@ export default function ContactForm({contact, handleContactForm}){
                 <label htmlFor="phone_number" className="form-label">
                     {lang.service_contact_phone || uploadLang.service_contact_phone} ({lang.optionnal || uploadLang.optionnal})
                 </label>
-                    <PhoneInputWithCountrySelect
-                        dir="ltr"
-                        country={'us'}
-                        id="phone_number" 
-                        name="phone_number" 
-                        placeholder="+ 123456789"
-                        onChange={handlePhoneForm}
-                        value={phone || ""}
-                    />
+                <PhoneInputWithCountrySelect
+                    dir="ltr"
+                    country={'us'}
+                    id="phone_number" 
+                    name="phone_number" 
+                    placeholder="+ 123456789"
+                    onChange={handlePhoneForm}
+                    value={phone || ""}
+                />
+                {(phone && phone.length > 14) && <div className="text-danger">Invalid phone number</div>}
             </div>
             <div className="col-md-6 mb-3">
                 <label htmlFor="email" className="form-label">

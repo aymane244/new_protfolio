@@ -22,12 +22,14 @@ export default function Accordion({getLang, lang, uploadLang}){
                         aria-controls="panelsStayOpen-collapseOne"
                     >
                         <div className={getLang === "ar" ? "d-flex justify-content-between w-100" : ""}>
-                            <div>
-                                <FontAwesomeIcon 
-                                    icon={faCheckDouble} 
-                                    className={getLang === "ar" ? "font-icon-color ms-2" : "font-icon-color me-2"}
-                                />
-                                <strong> {lang.skill_fullStack || uploadLang.skill_fullStack}</strong>
+                            <div className="d-flex">
+                                <span>
+                                    <FontAwesomeIcon 
+                                        icon={faCheckDouble} 
+                                        className={getLang === "ar" ? "font-icon-color ms-2" : "font-icon-color me-2"}
+                                    />
+                                </span>
+                                <span><strong> {lang.skill_fullStack || uploadLang.skill_fullStack}</strong></span>
                             </div>
                             <div>
                                 {getLang === "ar" && (showSkill1 ? <FontAwesomeIcon icon={faChevronDown} /> : <FontAwesomeIcon icon={faChevronUp} />)}
@@ -55,12 +57,14 @@ export default function Accordion({getLang, lang, uploadLang}){
                         aria-controls="panelsStayOpen-collapseTwo"
                     >
                         <div className={getLang === "ar" ? "d-flex justify-content-between w-100" : ""}>
-                            <div>
-                                <FontAwesomeIcon 
-                                    icon={faCheckDouble} 
-                                    className={getLang === "ar" ? "font-icon-color ms-2" : "font-icon-color me-2"}
-                                />
-                                <strong> {lang.skill_mobile || uploadLang.skill_mobile}</strong>
+                            <div className="d-flex">
+                                <span>
+                                    <FontAwesomeIcon 
+                                        icon={faCheckDouble} 
+                                        className={getLang === "ar" ? "font-icon-color ms-2" : "font-icon-color me-2"}
+                                    />
+                                </span>
+                                <span><strong>{lang.skill_mobile || uploadLang.skill_mobile}</strong></span>
                             </div>
                             <div>
                                 {getLang === "ar" && (!showSkill2 ? <FontAwesomeIcon icon={faChevronDown} /> : <FontAwesomeIcon icon={faChevronUp} />)}

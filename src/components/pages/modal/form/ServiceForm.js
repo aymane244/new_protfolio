@@ -33,7 +33,7 @@ export default function ServiceFrom({ selectService, serviceDescription, setRest
                 />
                 {selectedServiceModal === "" && <select 
                     className={getLang === "ar" ? "form-select form-select-ar pe-5" : "form-select ps-5"} 
-                    id="service-select" 
+                    id="service-select"
                     onChange={handleSelectChange} 
                     defaultValue={textKey}
                 >

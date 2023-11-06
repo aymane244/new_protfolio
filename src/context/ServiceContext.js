@@ -14,6 +14,7 @@ export default function ServiceContext(){
         last_name : "",
         email : "",
     });
+    const [phone , setPhone] = useState("");
     const [value, setValue] = useState({
         responsive : "",
         newsLetter : "",
@@ -116,7 +117,7 @@ export default function ServiceContext(){
         <ContextServices.Provider value={{checkService, value, setOtherServiceValue, otherService, services, price, setPrice, resetValues, 
             addPage, pageNumber, page_price, sum, textKey, setTextKey, selectEcommerceService, ecommerceService, resetPageNumbers, 
             setOtherService, selectedServiceModal, selectServiceModal, emptySelectServiceModal, setSelectedServiceModal, contact, setContact, 
-            nextForm, setNextForm
+            nextForm, setNextForm, phone, setPhone
         }}>
             <Home/>
         </ContextServices.Provider>

@@ -28,7 +28,6 @@ export default function Functionalities(){
             document.body.removeEventListener("click", handleClickOutside, true);
         };
     }, [handleClickOutside]);
-    console.log(parentDiv.current);
     return(
         <div className="col-md-12 mb-2 mt-3">
             <div className="row align-items-center">
