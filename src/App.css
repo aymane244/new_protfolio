@@ -235,6 +235,9 @@ body{
     box-shadow: 10014px 0 0 -5px;
   }
 }
+.img-size{
+  width: 150px;
+}
 .brand-hover{
   transition: 0.4s;
 }
