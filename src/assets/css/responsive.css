@@ -15,6 +15,9 @@
     .display-dot{
         display: none;
     }
+    .banner{
+        height: 100vh;
+    }
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px){
@@ -33,6 +36,9 @@
     .display-dot{
         display: none;
     }
+    .banner{
+        height: 100vh;
+    }
 }
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px){
@@ -47,6 +53,9 @@
     }
     .display-dot{
         display: block;
+    }
+    .banner{
+        height: 100vh;
     }
 }
 /* Large devices (laptops/desktops, 992px and up) */
@@ -63,6 +72,9 @@
     .card-margin{
         margin-bottom: 18rem;
     }
+    .banner{
+        height: 100vh;
+    }
 }
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px){
@@ -77,5 +89,8 @@
     }
     .card-margin{
         margin-bottom: 15.5rem;
+    }
+    .banner{
+        height: 100vh;
     }
 }

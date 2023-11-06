@@ -15,6 +15,8 @@ export default function ServiceModal(){
     const {textKey, setTextKey, ecommerceService, selectedServiceModal, setSelectedServiceModal, contact, setContact, nextForm, setNextForm, phone, setPhone, pageNumber, value} = useContext(ContextServices);
     const [service, setService] = useState("");
     const [restServices, setRestServices] = useState("");
+    console.log(pageNumber);
+    console.log(value);
     function selectService(event){
         const selectedService = serviceDescription.find(
             (service) => service.key === event.target.value

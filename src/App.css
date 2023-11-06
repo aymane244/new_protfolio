@@ -5,9 +5,6 @@
 body{
   font-family: 'Cairo', sans-serif !important;
 }
-.banner{
-  height: 100vh;
-}
 .pointer{
   cursor: pointer;
 }
