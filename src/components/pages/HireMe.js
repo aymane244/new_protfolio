@@ -35,33 +35,28 @@ export default function HireMe(){
                 </div>
                 <hr/>
                 <div className="col-md-12 px-5 py-3 text-center">
-                    <div className="d-flex justify-content-center align-items-center">
-                        <div>
-                            <img src="/images/aimane.png" alt="aimane-profile" className="img-thumbnail rounded-circle img-size" />
-                        </div>
-                        <div className="ms-3">
-                            <h4 className="text-color">{lang.myName || uploadLang.myName}</h4>
-                            <h5>{lang.fullStack || uploadLang.fullStack}</h5>
-                            <FontAwesomeIcon icon={faEnvelope} /> :
-                            a.chnaif2010@gmail.com
-                            <hr className="w-25 mx-auto" />
-                            <div className="d-flex justify-content-center my-4 fs-5 socials">
-                                <a href="/" className="text-color">
-                                    <FontAwesomeIcon icon={faGithub} className="border rounded-circle p-2 brand-hover" />
-                                </a>
-                                <a href="/" className="text-color">
-                                    <FontAwesomeIcon icon={faWhatsapp} className="border rounded-circle p-2 brand-hover" />
-                                </a>
-                                <a href="/" className="text-color">
-                                    <FontAwesomeIcon icon={faFacebook} className="border rounded-circle p-2 brand-hover" />
-                                </a>
-                                <a href="/" className="text-color">
-                                    <FontAwesomeIcon icon={faXTwitter} className="border rounded-circle p-2 brand-hover" />
-                                </a>
-                                <a href="/" className="text-color">
-                                    <FontAwesomeIcon icon={faLinkedin} className="border rounded-circle p-2 brand-hover" />
-                                </a>
-                            </div>
+                    <div>
+                        <h4 className="text-color">{lang.myName || uploadLang.myName}</h4>
+                        <h5>{lang.fullStack || uploadLang.fullStack}</h5>
+                        <FontAwesomeIcon icon={faEnvelope} /> :
+                        a.chnaif2010@gmail.com
+                        <hr className="w-25 mx-auto" />
+                        <div className="d-flex justify-content-center my-4 fs-5 socials">
+                            <a href="/" className="text-color">
+                                <FontAwesomeIcon icon={faGithub} className="border rounded-circle p-2 brand-hover" />
+                            </a>
+                            <a href="/" className="text-color">
+                                <FontAwesomeIcon icon={faWhatsapp} className="border rounded-circle p-2 brand-hover" />
+                            </a>
+                            <a href="/" className="text-color">
+                                <FontAwesomeIcon icon={faFacebook} className="border rounded-circle p-2 brand-hover" />
+                            </a>
+                            <a href="/" className="text-color">
+                                <FontAwesomeIcon icon={faXTwitter} className="border rounded-circle p-2 brand-hover" />
+                            </a>
+                            <a href="/" className="text-color">
+                                <FontAwesomeIcon icon={faLinkedin} className="border rounded-circle p-2 brand-hover" />
+                            </a>
                         </div>
                     </div>
                 </div>
