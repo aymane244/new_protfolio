@@ -1,11 +1,11 @@
 import React, {useCallback, useContext, useEffect, useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronDown, faClipboard, faChevronUp } from "@fortawesome/free-solid-svg-icons";
+import { faChevronDown, faClipboard, faChevronUp, faLanguage, faPlus, faTrash } from "@fortawesome/free-solid-svg-icons";
 import { ContextServices } from "../../../../context/ServiceContext";
 import { Lang } from "../../../../context/LangContext";
 
 export default function Functionalities(){
-    const {checkService, value, setOtherServiceValue, otherService, textKey, selectedServiceModal} = useContext(ContextServices);
+    const {checkService, value, setOtherServiceValue, otherService, textKey, selectedServiceModal, languages, addLanguage, deleteLanguage, handlLanguages} = useContext(ContextServices);
     const {lang, getLang, uploadLang} = useContext(Lang);
     const [show, setShow] = useState(false);
     let multilingue = (textKey !== "Landing" || selectedServiceModal === "Landing") ? 
@@ -117,7 +117,7 @@ export default function Functionalities(){
                                     checked={value.multilingue || ""}
                                 /> 
                                 <label className="form-check-label pointer" htmlFor="checkMultilingue">
-                                    {multilingue} (150 {lang.dollar || uploadLang.dollar})
+                                    {multilingue} (150 {lang.dollar || uploadLang.dollar}/{lang.lang_website || uploadLang.lang_website})
                                 </label>
                             </div>
                             <div className="d-flex align-items-center">
@@ -137,6 +137,45 @@ export default function Functionalities(){
                     </div>}
                 </div>
             </div>
+            {value.multilingue && languages.map((item, index)=>(
+                <div className="row align-items-center mb-2 mt-4" key={index}>
+                    <div className="col-md-3">
+                        <label htmlFor="languages" className="form-label">{lang.lang_website || uploadLang.lang_website}# {index + 1}: </label>
+                    </div>
+                    <div className="col-md-7 col-lg-7 col-sm-9 col-xs-9">
+                        <div className="d-flex align-items-center">
+                            <FontAwesomeIcon 
+                                icon={faLanguage} 
+                                className={getLang === "ar" ? "position-absolute me-3 fs-5" : "position-absolute ms-3 fs-5"}
+                            />
+                            <input 
+                                type="text" 
+                                className={getLang === "ar" ? "form-control pe-5" : "form-control ps-5"}
+                                id="languages" 
+                                name="languageSelect"
+                                onChange={event=> handlLanguages(index, event)}
+                                value={item.languageSelect}
+                            />
+                        </div>
+                    </div>
+                    <div className="col-md-2 col-lg-2 col-sm-3 col-xs-3">
+                        <div className="d-flex justify-content-center">
+                            <span 
+                                className="bg-success text-white py-2 px-3 text-center me-2 rounded pointer"
+                                onClick={addLanguage}
+                            >
+                                <FontAwesomeIcon icon={faPlus}/>
+                            </span>
+                            {languages.length > 1 && <span 
+                                className="bg-danger text-white py-2 px-3 text-center me-2 rounded pointer"
+                                onClick={deleteLanguage}
+                            >
+                                <FontAwesomeIcon icon={faTrash}/>
+                            </span>}
+                        </div>
+                    </div>
+                </div>
+            ))}   
             {value.other && <div className={getLang === "ar" ? "form-floating form-floating-ar my-3 mt-1" : "form-floating my-3"}>
                 <textarea 
                     className="form-control floating-area" 

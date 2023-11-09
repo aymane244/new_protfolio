@@ -36,6 +36,7 @@ export default function ServiceFrom({ selectService, serviceDescription, setRest
                     id="service-select"
                     onChange={handleSelectChange} 
                     defaultValue={textKey}
+                    name="service"
                 >
                     <option value="" key="0">-- {lang.service_select || uploadLang.service_select} --</option>
                     {serviceDescription.map((service, index)=>(

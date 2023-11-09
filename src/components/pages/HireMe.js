@@ -1,6 +1,6 @@
 import { faFacebook, faGithub, faLinkedin, faWhatsapp, faXTwitter } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Lang } from "../../context/LangContext";
 import Accordion from "./accordion/Accordion";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
@@ -9,6 +9,17 @@ import { useInView } from "react-intersection-observer";
 
 export default function HireMe(){
     const {uploadLang, getLang, lang} = useContext(Lang);
+    const [width, setWidth] = useState(window.innerWidth);
+    function handleWindowSizeChange(){
+        setWidth(window.innerWidth);
+    }
+    useEffect(()=>{
+        window.addEventListener('resize', handleWindowSizeChange);
+        return ()=>{
+            window.removeEventListener('resize', handleWindowSizeChange);
+        }
+    }, []);
+    const isMobile = width <= 768;
     const [ref, inView] = useInView({
         triggerOnce: true,
     });
@@ -42,19 +53,19 @@ export default function HireMe(){
                         a.chnaif2010@gmail.com
                         <hr className="w-25 mx-auto" />
                         <div className="d-flex justify-content-center my-4 fs-5 socials">
-                            <a href="/" className="text-color">
+                            <a href="https://github.com/aymane244" className="text-color" target="_blank" rel="noreferrer">
                                 <FontAwesomeIcon icon={faGithub} className="border rounded-circle p-2 brand-hover" />
                             </a>
-                            <a href="/" className="text-color">
+                            {isMobile && <a href="https://api.whatsapp.com/send?phone=+21244776612" className="text-color" target="_blank" rel="noreferrer">
                                 <FontAwesomeIcon icon={faWhatsapp} className="border rounded-circle p-2 brand-hover" />
-                            </a>
-                            <a href="/" className="text-color">
+                            </a>}
+                            <a href="https://web.facebook.com/aymane.chnaif" className="text-color" target="_blank" rel="noreferrer">
                                 <FontAwesomeIcon icon={faFacebook} className="border rounded-circle p-2 brand-hover" />
                             </a>
-                            <a href="/" className="text-color">
+                            <a href="https://twitter.com/AymaneChnaif" className="text-color" target="_blank" rel="noreferrer">
                                 <FontAwesomeIcon icon={faXTwitter} className="border rounded-circle p-2 brand-hover" />
                             </a>
-                            <a href="/" className="text-color">
+                            <a href="https://www.linkedin.com/in/aimane-chnaif-692290232/" className="text-color" target="_blank" rel="noreferrer">
                                 <FontAwesomeIcon icon={faLinkedin} className="border rounded-circle p-2 brand-hover" />
                             </a>
                         </div>

@@ -6,31 +6,10 @@ import FuncionalitiesPrice from "./FunctionalitiesPrice";
 import PagesPrice from "./PagesPrice";
 import { Lang } from "../../../../context/LangContext";
 
-export default function AllServicesPrice(){
-    const {value, otherService, pageNumber, page_price, sum, textKey, ecommerceService, selectedServiceModal} = useContext(ContextServices);
+export default function AllServicesPrice({value, pageNumber, page_price, sum, ecommerceService, selectedServiceModal, textKey, initial_price}){
+    const {otherService} = useContext(ContextServices);
     const {lang, uploadLang} = useContext(Lang)
     let final_page_price = (textKey === "Mobile" || selectedServiceModal === "Mobile") ? page_price + 80 : page_price;
-    const priceCalculation = ()=>{
-        switch (textKey || selectedServiceModal){
-            case "Landing":
-                return 150;
-            case "Portfolio/Business" :
-                return 170;
-            case "Blog" :
-                return 500;
-            case "Ecommerce" :
-                return (ecommerceService === "creditCard_delivery" ? 1000 : 700);
-            case "Educational" :
-                return 3000;
-            case "Application" :
-                return 5000;
-            case "Mobile" :
-                return 600;
-            default:
-                return 0;
-        }
-    }
-    let initial_price = priceCalculation();
     return(
         <div>
             {(((textKey === "Ecommerce" || selectedServiceModal === "Ecommerce") && ecommerceService) 
@@ -69,7 +48,7 @@ export default function AllServicesPrice(){
                 </div>
                 <hr />
                 <PagesPrice/>
-                {(value.responsive || value.newsLetter || value.SEO || value.admin || value.multilingue || otherService) && <>
+                {(value.responsive || value.newsLetter || value.SEO || value.admin || value.multilingue) && <>
                     <FuncionalitiesPrice/>
                     <hr />
                 </>}

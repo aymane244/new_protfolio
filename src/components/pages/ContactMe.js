@@ -1,15 +1,18 @@
 import { faBookOpen, faEnvelope, faUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import { Lang } from "../../context/LangContext";
 import { useInView } from "react-intersection-observer";
 import axios from "axios";
+import Swal from "sweetalert2";
 
 export default function ContactMe(){
     const {lang, getLang, uploadLang} = useContext(Lang);
     const [ref, inView] = useInView({
         triggerOnce: true,
     });
+    const fileInputRef = useRef(null);
+    const [loader, setLoader] = useState(false);
     const [message, setMessage] = useState({
         fullName : "",
         email : "",
@@ -34,16 +37,39 @@ export default function ContactMe(){
         data.append("message", message.message);
         data.append("document", message.document);
         data.append("language", lang);
-        axios.post("http://127.0.0.1:8000/api/send_message", data).then(response=>{
+        setLoader(true);
+        axios.post("http://127.0.0.1:8000/api/send_message", data)
+        .then(response=>{
             if(response.data.status === 400){
                 setMessage(errors =>({
                     ...errors,
                     error: response.data.message_errors,
                 }))
+                setLoader(false);
             }else if(response.data.status === 200){
-                console.log(response.data.message);
+                Swal.fire({
+                    text: response.data.message,
+                    icon: 'success',
+                }).then(() => {
+                    setMessage({
+                        fullName: "",
+                        email: "",
+                        subject: "",
+                        message: "",
+                        document: "",
+                        error: [],
+                    });
+                    fileInputRef.current.value = '';
+                    setLoader(false);
+                });
             }
-        })
+        }).catch(error=>{
+            Swal.fire({
+                text: lang.error || uploadLang.error, error,
+                icon: 'error',
+            });
+            setLoader(false);
+        });
     }
     useEffect(()=>{
         if(inView){
@@ -138,14 +164,26 @@ export default function ContactMe(){
                                 <label htmlFor="document" className="form-label">
                                     {lang.file || uploadLang.file} ({lang.optionnal || uploadLang.optionnal})
                                 </label>
-                                <input className="form-control" type="file" id="document" name="document" onChange={handleMessage}/>
+                                <input 
+                                    className="form-control" 
+                                    type="file" id="document" 
+                                    name="document" 
+                                    ref={fileInputRef} 
+                                    onChange={handleMessage}
+                                />
                                 <div id="document_help" className="form-text">
                                     {lang.file_text || uploadLang.file_text}
                                 </div>
                                 <div className="text-danger">{message.error.document}</div>
                             </div>
                             <div className="text-center">
-                                <button type="submit" className="btn btn-primary">{lang.send_message || uploadLang.send_message}</button>
+                                {loader ? 
+                                    <button type="submit" className="btn btn-primary" disabled>
+                                        <span className="spinner-border spinner-border-sm me-2"></span>
+                                        {lang.send_message || uploadLang.send_message}
+                                    </button> : 
+                                    <button type="submit" className="btn btn-primary">{lang.send_message || uploadLang.send_message}</button>
+                                }
                             </div>
                         </div>
                     </form>

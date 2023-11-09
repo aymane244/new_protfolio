@@ -9,14 +9,16 @@ import ContactForm from "./form/ContactForm";
 import { ContextServices } from "../../../context/ServiceContext";
 import AllServicesForm from "./form/AllServicesForm";
 import AllServicesPrice from "./prices/AllServicesPrice";
+import axios from "axios";
+import Swal from "sweetalert2";
 
 export default function ServiceModal(){
     const {getLang, lang, uploadLang} = useContext(Lang);
-    const {textKey, setTextKey, ecommerceService, selectedServiceModal, setSelectedServiceModal, contact, setContact, nextForm, setNextForm, phone, setPhone, pageNumber, value} = useContext(ContextServices);
+    const {textKey, setTextKey, ecommerceService, selectedServiceModal, setSelectedServiceModal, contact, setContact, nextForm, setNextForm, 
+        phone, setPhone, pageNumber, value, page_price, sum, services, otherService, languages} = useContext(ContextServices);
     const [service, setService] = useState("");
     const [restServices, setRestServices] = useState("");
-    console.log(pageNumber);
-    console.log(value);
+    const [loader, setLoader] = useState(false);
     function selectService(event){
         const selectedService = serviceDescription.find(
             (service) => service.key === event.target.value
@@ -59,6 +61,75 @@ export default function ServiceModal(){
     function handlePhoneForm(value){
         setPhone(value);
     }
+    const priceCalculation = ()=>{
+        switch (textKey || selectedServiceModal){
+            case "Landing":
+                return 150;
+            case "Portfolio/Business" :
+                return 170;
+            case "Blog" :
+                return 500;
+            case "Ecommerce" :
+                return (ecommerceService === "creditCard_delivery" ? 1000 : 700);
+            case "Educational" :
+                return 3000;
+            case "Application" :
+                return 5000;
+            case "Mobile" :
+                return 600;
+            default:
+                return 0;
+        }
+    }
+    console.log(selectedServiceModal);
+    let initial_price = priceCalculation();
+    function sendQuote(event){
+        event.preventDefault();
+        const check_languages = value.multilingue === "Multilingual website" && languages.some(item => item.languageSelect === '');
+        if(check_languages.length > 0){
+            Swal.fire({
+                text: lang.error_language || uploadLang.error_language,
+                icon: 'warning',
+            });
+        }else{
+            const data = new FormData();
+            data.append("service", service || selectedServiceModal);
+            data.append("first_name", contact.first_name);
+            data.append("last_name", contact.last_name);
+            data.append("email", contact.email);
+            data.append("phone", phone);
+            data.append("initial_price", initial_price);
+            data.append("page_number", pageNumber);
+            data.append("page_price", page_price);
+            data.append("services", JSON.stringify(services));
+            data.append("other_service", otherService);
+            data.append("sum", sum);
+            data.append("language", lang);
+            data.append("rest_services", restServices);
+            data.append("languages", JSON.stringify(languages));
+            setLoader(true);
+            axios.post("http://127.0.0.1:8000/api/view_quote", data)
+            .then(response=>{
+                return axios.post("http://127.0.0.1:8000/api/send_quote", data);
+            })
+            .then(response=>{
+                Swal.fire({
+                    text: response.data.message,
+                    icon: 'success',
+                }).then(() => {
+                    window.location.reload();
+                    setLoader(false);
+                });
+            })
+            .catch(error=>{
+                Swal.fire({
+                    text: lang.error || uploadLang.error, error,
+                    icon: 'error',
+                });
+                setLoader(false);
+            });
+        }
+    }
     return(
         <div className="modal fade" id="service" tabIndex="-1" aria-labelledby="serviceLabel" aria-hidden="true">
             <div className="modal-dialog modal-dialog-scrollable modal-xl">
@@ -71,8 +142,9 @@ export default function ServiceModal(){
                     </div>
                     <div className="modal-body">
                         {((textKey !== "" && textKey !== "Plugin" && textKey !== "Maintenance") || 
-                            (selectedServiceModal !== "" && selectedServiceModal !== "Plugin" && selectedServiceModal !== "Maintenance")) && contact.email
-                            && <div className="row justify-content-center my-2">
+                            (selectedServiceModal !== "" && selectedServiceModal !== "Plugin" && selectedServiceModal !== "Maintenance")) 
+                            && /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/.test(contact.email) && 
+                        <div className="row justify-content-center my-2">
                             <div className="col-md-10">
                                 <span 
                                     className={!nextForm ? "float-end pointer fs-4" : "pointer fs-4"}
@@ -82,7 +154,7 @@ export default function ServiceModal(){
                                 </span>
                             </div>
                         </div>}
-                        <form>
+                        <form onSubmit={sendQuote}>
                             <div className="row justify-content-center">
                                 <div className="col-md-10">
                                     {!nextForm && 
@@ -127,23 +199,44 @@ export default function ServiceModal(){
                                             <AllServicesForm
                                                 service={service} 
                                             />
-                                            <AllServicesPrice />
+                                            <AllServicesPrice 
+                                                value = {value}
+                                                pageNumber ={pageNumber}
+                                                page_price = {page_price}
+                                                sum = {sum}
+                                                ecommerceService = {ecommerceService}
+                                                textKey = {textKey}
+                                                selectedServiceModal = {selectedServiceModal}
+                                                initial_price = {initial_price}
+                                            />
                                         </>
                                     }
                                 </div>
                                 {((nextForm && ((textKey !== "Ecommerce" && selectedServiceModal !== "Ecommerce") ||
                                     (ecommerceService !== "" && (textKey === "Ecommerce" || selectedServiceModal === "Ecommerce")))) || 
                                     (textKey === "Plugin" || textKey === "Maintenance" || selectedServiceModal === "Plugin" || 
-                                    selectedServiceModal === "Maintenance")) && <div className="col-md-10 text-center">
-                                    <button className="btn btn-primary px-5 py-2">
-                                        {lang.send || uploadLang.send}
-                                    </button>
-                                </div>}
+                                    selectedServiceModal === "Maintenance")) && 
+                                    <div className="col-md-10 text-center">
+                                        {/^[^@]+@[^@]+\.[a-zA-Z]{2,}$/.test(contact.email)  && loader !== true ?
+                                            <button className="btn btn-primary px-5 py-2">
+                                                {lang.send || uploadLang.send}
+                                            </button> : 
+                                            loader === true ? 
+                                            <button className="btn btn-primary px-5 py-2" disabled>
+                                                <span className="spinner-border spinner-border-sm me-2"></span>
+                                                {lang.send || uploadLang.send}
+                                            </button> :
+                                            <button className="btn btn-primary px-5 py-2" disabled>
+                                                {lang.send || uploadLang.send}
+                                            </button>
+                                        }
+                                    </div>
+                                }
                             </div>
                         </form>
                     </div>
                     <div className="modal-footer d-flex justify-content-between">
-                        <p className="text-secondary">{lang.next_text || uploadLang.next_text}</p>
+                        {!nextForm && <p className="text-secondary">{lang.next_text || uploadLang.next_text}</p>}
                         <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">
                             {lang.close || uploadLang.close}
                         </button>

@@ -21,6 +21,12 @@
     .h_card{
         height: 350px;
     }
+    .col-xs-3{
+        width: 25% !important;
+    }
+    .col-xs-9{
+        width: 75% !important;
+    }
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px){
