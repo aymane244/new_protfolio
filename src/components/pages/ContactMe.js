@@ -38,7 +38,7 @@ export default function ContactMe(){
         data.append("document", message.document);
         data.append("language", lang);
         setLoader(true);
-        axios.post("http://127.0.0.1:8000/api/send_message", data)
+        axios.post("https://aimane-web-dev.com/api/send_message", data)
         .then(response=>{
             if(response.data.status === 400){
                 setMessage(errors =>({
