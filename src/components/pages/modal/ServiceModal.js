@@ -81,7 +81,6 @@ export default function ServiceModal(){
                 return 0;
         }
     }
-    console.log(selectedServiceModal);
     let initial_price = priceCalculation();
     function sendQuote(event){
         event.preventDefault();
@@ -108,9 +107,9 @@ export default function ServiceModal(){
             data.append("rest_services", restServices);
             data.append("languages", JSON.stringify(languages));
             setLoader(true);
-            axios.post("http://127.0.0.1:8000/api/view_quote", data)
+            axios.post("https://aimane-web-dev.com/api/view_quote", data)
             .then(response=>{
-                return axios.post("http://127.0.0.1:8000/api/send_quote", data);
+                return axios.post("https://aimane-web-dev.com/api/send_quote", data);
             })
             .then(response=>{
                 Swal.fire({
