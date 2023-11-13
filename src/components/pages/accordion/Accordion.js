@@ -26,7 +26,7 @@ export default function Accordion({getLang, lang, uploadLang}){
                                 <span>
                                     <FontAwesomeIcon 
                                         icon={faCheckDouble} 
-                                        className={getLang === "ar" ? "font-icon-color margin_backend_ar" : "font-icon-color me-2"}
+                                        className={getLang === "ar" ? "font-icon-color ms-2" : "font-icon-color me-2"}
                                     />
                                 </span>
                                 <span><strong> {lang.skill_fullStack || uploadLang.skill_fullStack}</strong></span>
