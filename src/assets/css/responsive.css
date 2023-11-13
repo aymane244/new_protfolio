@@ -27,6 +27,9 @@
     .col-xs-9{
         width: 75% !important;
     }
+    .margin_backend_ar{
+        margin-left: 1px;
+    }
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px){
@@ -51,6 +54,9 @@
     .h_card{
         height: 350px;
     }
+    .margin_backend_ar{
+        margin-right: 1px;
+    }
 }
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px){
@@ -58,10 +64,10 @@
         width: 39%;
     }
     .card-height{
-        height: 75vh;
+        height: 39vh;
     }
     .card-margin{
-        margin-bottom: 28.5rem;
+        margin-bottom: 23.5rem;
     }
     .display-dot{
         display: block;
@@ -71,6 +77,9 @@
     }
     .h_card{
         height: 350px;
+    }
+    .margin_backend_ar{
+        margin-left: 7px;
     }
 }
 /* Large devices (laptops/desktops, 992px and up) */
