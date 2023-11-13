@@ -39,7 +39,7 @@ export default function Layout(){
                                 <a href="#contact" className="nav-link text-black">{lang.contact_nav || uploadLang.contact_nav}</a>
                             </li>
                         </ul>
-                        <div className="px-lg-3 w-nav">
+                        <div className="px-lg-3 w-nav me-4 pe-2">
                             <SelectLang/>
                         </div>
                     </div>

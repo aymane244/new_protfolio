@@ -13,7 +13,7 @@ export const projects = [
         project_description_english_list2 : "Comprehensive student progress tracking.",
         project_description_english_list3 : "Real-time attendance monitoring.",
         project_description_english_list4 : "Monthly reports to students and parents.",
-        project_description_french : "Quran Academie est une plateforme d'éducation en ligne ! Cette plateforme propose une gamme de fonctionnalités précieuses.",
+        project_description_french : "Quran Academie est une plateforme d'éducation en ligne ! La plateforme propose des fonctionnalités précieuses.",
         project_description_french_list1 : "Cours en ligne.",
         project_description_french_list2 : "Suivi complet de la progression des élèves.",
         project_description_french_list3 : "Surveillance en temps réel de la présence.",

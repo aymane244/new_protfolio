@@ -115,7 +115,7 @@ export default function ServiceModal(){
                 Swal.fire({
                     text: response.data.message,
                     icon: 'success',
-                }).then(() => {
+                }).then(()=>{
                     window.location.reload();
                     setLoader(false);
                 });

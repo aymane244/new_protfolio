@@ -30,7 +30,7 @@ export default function AccordionLanguages({getLang, lang, uploadLang}){
                                 <span><strong>{lang.forntEnd || uploadLang.forntEnd}</strong></span>
                             </div>
                             <div>
-                                {getLang === "ar" && (showSkill1 ? <FontAwesomeIcon icon={faChevronDown} /> : <FontAwesomeIcon icon={faChevronUp} />)}
+                                {getLang === "ar" && (showSkill1 ? <FontAwesomeIcon icon={faChevronUp} /> : <FontAwesomeIcon icon={faChevronDown} />)}
                             </div>
                         </div>
                     </button>

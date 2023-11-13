@@ -67,7 +67,7 @@ export default function Accordion({getLang, lang, uploadLang}){
                                 <span><strong>{lang.skill_mobile || uploadLang.skill_mobile}</strong></span>
                             </div>
                             <div>
-                                {getLang === "ar" && (!showSkill2 ? <FontAwesomeIcon icon={faChevronDown} /> : <FontAwesomeIcon icon={faChevronUp} />)}
+                                {getLang === "ar" && (!showSkill2 ? <FontAwesomeIcon icon={faChevronUp} /> : <FontAwesomeIcon icon={faChevronDown} />)}
                             </div>
                         </div>
                     </button>

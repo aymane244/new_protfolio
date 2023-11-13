@@ -44,11 +44,11 @@ export default function SelectLang(){
                 </div>
                 {showLang && <div className="position-absolute border border-top-0 w-100 shadow z-3 bg-white position-select text-start" ref={containerDivLang}>
                     <div className="dropdown-hover-select">
-                        {getLang === null ? language.filter(({code})=>code !== "en").map(({flag, label_english})=>(
+                        {getLang === null ? language.filter(({code})=>code !== "en").map(({code, flag, label_english})=>(
                             <div 
                                 key="en" 
                                 className="d-flex justify-content-between px-2" 
-                                id="en"
+                                id={code}
                                 onClick={changeLang}
                             >
                                 <img src={flag} alt="en" />
