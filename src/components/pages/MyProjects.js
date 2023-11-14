@@ -24,7 +24,7 @@ export default function MyProjects(){
             </div>
             <div className="row justify-content-center">
                 {projects.map((project, index)=>(
-                    <div className="col-md-4 mt-3" key={project.id}>
+                    <div className="col-lg-4 col-md-6 mt-3" key={project.id}>
                         <div className="position-relative h_card">
                             <img src={project.image} className="img-fluid h-100 image" alt={project.image_alt} />
                             <div className="position-absolute top-0 w-100 h-100 bg-dark opacity-75"></div>
