@@ -82,8 +82,8 @@
         margin-left: 7px;
     }
 }
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px){
+/* Large devices (laptops/desktops, 991px and up) */
+@media only screen and (min-width: 991px){
     .w-nav{
         width: 15%;
     }
