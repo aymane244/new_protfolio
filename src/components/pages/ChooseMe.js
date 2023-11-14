@@ -58,12 +58,7 @@ export default function ChooseMe(){
                     </div>
                 </div>
                 <div className="col-md-6 mt-3 h-100">
-                    <div className=
-                        {
-                            getLang === "ar" ? "card pb-lg-5 shadow border-0 rounded-0 card-animation" : 
-                            "card pb-lg-4 shadow border-0 rounded-0 card-animation"
-                        }
-                    >
+                    <div className="card pb-lg-5 shadow border-0 rounded-0 card-animation">
                         <div className="card-body">
                             <h5><FontAwesomeIcon icon={faBookOpenReader} className="fs-2 font-icon-color" /></h5>
                             <h5 className="card-title">

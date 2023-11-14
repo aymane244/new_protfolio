@@ -99,7 +99,7 @@ export const french = {
     onTime_header : "Livraison dans les délais",
     onTime_text : "Je comprends l'importance des délais. Je m'engage à livrer les projets à temps et dans le respect du budget.",
     learning_header : "Apprentissage continu",
-    learning_text : "La technologie évolue constamment. Je suis déterminé à rester à jour avec les dernières tendances et les meilleures pratiques pour vous offrir les solutions les plus innovantes.",
+    learning_text : "La technologie évolue constamment. Je m'engage à rester informé des dernières tendances et meilleures pratiques pour vous offrir des solutions innovantes.",
     //service section
     my_services : "MES SERVICES",
     //project section

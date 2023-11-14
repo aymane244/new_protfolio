@@ -99,7 +99,7 @@ export const english = {
     onTime_header : "On-Time Delivery",
     onTime_text : "I understand the importance of deadlines. I'm committed to delivering projects on time and within budget.",
     learning_header : "Continuous Learning",
-    learning_text : "Technology is constantly evolving. I'm dedicated to staying up-to-date with the latest trends and best practices to offer you the most innovative solutions.",
+    learning_text : "Technology evolves constantly. I'm committed to staying updated on the latest trends and best practices to provide innovative solutions.",
     //service section
     my_services : "MY SERVICES",
     //project section
