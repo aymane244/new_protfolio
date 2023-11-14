@@ -1,5 +1,5 @@
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 400px){
+@media only screen and (max-width: 600px){
     .w-nav{
         width: 30%;
     }
@@ -7,10 +7,10 @@
         width: 23%;
     }
     .card-height{
-        height: 30vh;
+        height: 35vh;
     }
     .card-margin{
-        margin-bottom: 10rem;
+        margin-bottom: 14rem;
     }
     .display-dot{
         display: none;
