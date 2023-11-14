@@ -24,7 +24,7 @@ export default function ChooseMe(){
                 <h3 className="pb-2">{lang.wokr_with_me || uploadLang.wokr_with_me}</h3>
             </div>
             <div className="row">
-                <div className="col-md-6 mt-3">
+                <div className="col-md-6 mt-3 h-100">
                     <div className="card pb-lg-5 shadow border-0 rounded-0 card-animation">
                         <div className="card-body">
                             <h5><FontAwesomeIcon icon={faAward} className="fs-2 font-icon-color" /></h5>
@@ -35,7 +35,7 @@ export default function ChooseMe(){
                         </div>
                     </div>
                 </div>
-                <div className="col-md-6 mt-3">
+                <div className="col-md-6 mt-3 h-100">
                     <div className="card pb-lg-5 shadow border-0 rounded-0 card-animation">
                         <div className="card-body">
                             <h5><FontAwesomeIcon icon={faComments} className="fs-2 font-icon-color" /></h5>
@@ -46,7 +46,7 @@ export default function ChooseMe(){
                         </div>
                     </div>
                 </div>
-                <div className="col-md-6 mt-3">
+                <div className="col-md-6 mt-3 h-100">
                     <div className="card pb-lg-5 shadow border-0 rounded-0 card-animation">
                         <div className="card-body">
                             <h5><FontAwesomeIcon icon={faBusinessTime} className="fs-2 font-icon-color" /></h5>
@@ -57,7 +57,7 @@ export default function ChooseMe(){
                         </div>
                     </div>
                 </div>
-                <div className="col-md-6 mt-3">
+                <div className="col-md-6 mt-3 h-100">
                     <div className=
                         {
                             getLang === "ar" ? "card pb-lg-5 shadow border-0 rounded-0 card-animation" : 

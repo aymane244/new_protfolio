@@ -76,7 +76,8 @@ export const french = {
     //about page
     about_header : "A PROPOS DE MOI",
     about_text : "Bonjour, je suis Aymane Chnaif, et je suis passionné par la concrétisation d'idées numériques. Avec une concentration dévouée sur la création de sites web impressionnants et d'applications mobiles dynamiques, j'ai trois années d'expérience avérée dans le monde du développement web full-stack et de la conception d'applications mobiles.",
-    about_text2 : "Je suis enthousiaste à l'idée d'entendre parler de vos idées de projet et de discuter de la façon dont je peux vous aider à atteindre vos objectifs. Que ce soit une refonte de site web, une nouvelle application mobile ou tout ce qui se trouve entre les deux, collaborons ensemble pour donner vie à votre vision.",
+    about_text2 : "With a dedicated focus on creating stunning websites and dynamic mobile applications, I have three years of proven experience in the world of full-stack web development and mobile app design.",
+    about_text3 : "Je suis enthousiaste à l'idée d'entendre parler de vos idées de projet et de discuter de la façon dont je peux vous aider à atteindre vos objectifs. Que ce soit pour une refonte de site web, une nouvelle application mobile, ou tout autre projet, collaborons ensemble pour donner vie à votre vision.",
     skills : "Mes compétences clés",
     skill_fullStack : "Développement Web Full-Stack",
     skill_fullStack_text1 : "Je me spécialise dans la création de solutions web de bout en bout, de la conception à la mise en œuvre et au déploiement.",
