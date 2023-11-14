@@ -27,9 +27,9 @@ export default function MyServices(){
             <div className="text-center header-section position-relative">
                 <h3 className="pb-2">{lang.my_services || uploadLang.my_services}</h3>
             </div>
-            <div className="row">
+            <div className="row justify-content-center">
                 {serviceDescription.map((service, index)=>(
-                    <div className="col-md-4 mt-3" key={service.key}>
+                    <div className="col-lg-4 col-md-6 mt-3" key={service.key}>
                         <div className="card position-relative card-margin border-0">
                             <div className="div-card-hover rounded">
                                 <img src={service.image} className="card-img-top h-img" alt={service.image_alt}/>
