@@ -6,7 +6,7 @@ import { Lang } from "../../context/LangContext";
 import { useInView } from "react-intersection-observer";
 
 export default function ChooseMe(){
-    const {lang, getLang, uploadLang} = useContext(Lang);
+    const {lang, uploadLang} = useContext(Lang);
     const [ref, inView] = useInView({
         triggerOnce: true,
     });
