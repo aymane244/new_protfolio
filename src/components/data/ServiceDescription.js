@@ -103,7 +103,7 @@ export const serviceDescription = [
         title_english : "Enhance Your WordPress Universe", 
         service_description_english : "Supercharge your website with cutting-edge WordPress plugins.",
         service_french : "Creation Plugin WordPress",
-        service_description_french : "Boostez votre site web avec des plugins WordPress.",
+        service_description_french : "Boostez votre site web avec des plugins WordPress Personalisés.",
         service_arabic : "إنشاء إضافة ووردبريس (Plugin)",
         title_arabic : "قم بتعزيز عالم ووردبريس الخاص بك", 
         service_description_arabic : "قم بتعزيز موقع الويب الخاص بك بواسطة مكونات إضافية WordPress الرائدة.",

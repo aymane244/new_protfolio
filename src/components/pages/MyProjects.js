@@ -41,7 +41,7 @@ export default function MyProjects(){
                                 </h4>
                             </div>
                             <div className="overlay">
-                                <div className="position-absolute text-white p-3 text">
+                                <div className="position-absolute text-white p-3 w-100">
                                     <p className="text-center">
                                         {
                                             getLang === "en" ? project.project_description_english : 
@@ -81,6 +81,14 @@ export default function MyProjects(){
                                                 getLang === "fr" ? project.project_description_french_list4 :
                                                 getLang === "ar" ? project.project_description_arabic_list4 :
                                                 project.project_description_english_list4
+                                            }
+                                        </li>
+                                        <li>
+                                            {
+                                                getLang === "en" ? project.project_description_english_list5 :
+                                                getLang === "fr" ? project.project_description_french_list5 :
+                                                getLang === "ar" ? project.project_description_arabic_list5 :
+                                                project.project_description_english_list5
                                             }
                                         </li>
                                     </ul>
