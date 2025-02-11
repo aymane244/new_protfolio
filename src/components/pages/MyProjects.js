@@ -28,7 +28,7 @@ export default function MyProjects(){
                         <div className="position-relative h_card">
                             <img src={project.image} className="img-fluid h-100 image" alt={project.image_alt} />
                             <div className="position-absolute top-0 w-100 h-100 bg-dark opacity-75"></div>
-                            <div className="position-absolute top-50 w-100 text-center text-white">
+                            <div className="position-absolute top-50 w-100 text-center text-white px-2">
                                 <h4>
                                     <strong>
                                         {

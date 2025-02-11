@@ -108,7 +108,7 @@ export const english = {
     additionnal : "Additional projects will be featured on the website in the future",
     //hire section
     hire : "LONG TERM PROJECTS",
-    hire_text_1 : "This section is intended for those interested in long-term or medium-term projects, I'm excited to hear about your project ideas",
+    hire_text_1 : "This section is intended for those interested in long-term or medium-term projects, I'm excited to hear about your project ideas ",
     hire_text_2 : "and discuss how I can help you achieve your goals, feel free to reach out to me at the contact information below.",
     forntEnd : "Front-end development Technologies and Design",
     backEnd : "Back-end development Technologies and Database",

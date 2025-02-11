@@ -37,11 +37,10 @@ export default function HireMe(){
                 <h3 className="pb-2">{lang.hire || uploadLang.hire}</h3>
             </div>
             <div className="row bg-white shadow mt-3">
-                <div className="text-center text-secondary px-5 py-3">
+                <div className="text-secondary px-5 py-3">
                     <strong>
-                        {lang.hire_text_1 || uploadLang.hire_text_1}<br/>
-                        {lang.hire_text_2 || uploadLang.hire_text_2}<br/>
-                        {lang.hire_text_3 || uploadLang.hire_text_3}
+                        {lang.hire_text_1 || uploadLang.hire_text_1}
+                        {lang.hire_text_2 || uploadLang.hire_text_2}
                     </strong>
                 </div>
                 <hr/>

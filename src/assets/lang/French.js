@@ -74,7 +74,7 @@ export const french = {
     pages : "pages",
     functionalities : "Fonctionnalités",
     //about page
-    about_header : "A PROPOS DE MOI",
+    about_header : "A PROPOS",
     about_text : "Bonjour, je suis Aymane Chnaif, et je suis passionné par la concrétisation d'idées numériques. Avec une concentration dévouée sur la création de sites web impressionnants et d'applications mobiles dynamiques, j'ai trois années d'expérience avérée dans le monde du développement web full-stack et de la conception d'applications mobiles.",
     about_text2 : "Avec une attention dédiée à la création de sites web impressionnants et d'applications mobiles dynamiques, j'ai trois ans d'expérience dans le développement web complet et la conception d'applications mobiles.",
     about_text3 : "Je suis enthousiaste à l'idée d'entendre parler de vos idées de projet et de discuter de la façon dont je peux vous aider à atteindre vos objectifs. Que ce soit pour une refonte de site web, une nouvelle application mobile, ou tout autre projet, collaborons ensemble pour donner vie à votre vision.",
@@ -108,7 +108,7 @@ export const french = {
     additionnal : "Des projets supplémentaires seront présentés sur le site web à l'avenir",
     //hire section
     hire : "PROJETS À LONG TERME",
-    hire_text_1 : "Cette section s'adresse aux personnes intéressées par des projets à long terme ou à moyen terme. Je suis enthousiaste à l'idée d'entendre parler de vos idées de projet",
+    hire_text_1 : "Cette section s'adresse aux personnes intéressées par des projets à long terme ou à moyen terme. Je suis enthousiaste à l'idée d'entendre parler de vos idées de projet ",
     hire_text_2 : "et discuter de comment je peux vous aider à atteindre vos objectifs, n'hésitez pas à me contacter aux coordonnées ci-dessous.",
     forntEnd : "Technologies de développement Front-end et Design",
     backEnd : "Technologies de développement Back-end et Base de données",
