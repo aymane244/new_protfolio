@@ -102,7 +102,7 @@ export const projects = [
         project_description_french_list1 : "Fonctionnalité de boost de produit.",
         project_description_french_list2 : "Négociation du prix avec le vendeur via messages.",
         project_description_french_list3 : "Filtre de produits avec différentes options.",
-        project_description_french_list4 : "génération des factures pour les clients.",
+        project_description_french_list4 : "Génération des factures pour les clients.",
         project_description_french_list5 : "Intégration de PayPal pour les paiements.",
         project_description_arabic : "الميزات الرئيسية",
         project_description_arabic_list1 : "ميزة تعزيز المنتج.",

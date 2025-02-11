@@ -339,3 +339,9 @@ html{
 .w-title{
   width: 51%;
 }
+ul.bullet{
+  list-style-type: none;
+}
+.m-btn{
+  margin-top: 120px;
+}

@@ -50,7 +50,7 @@ export default function MyProjects(){
                                             project.project_description_english
                                         }
                                     </p>
-                                    <ul>
+                                    <ul className={project.project_description_english_list1.length === 0 ? 'bullet' : ''}>
                                         <li>
                                             {
                                                 getLang === "en" ? project.project_description_english_list1 :
@@ -92,7 +92,7 @@ export default function MyProjects(){
                                             }
                                         </li>
                                     </ul>
-                                    <h5 className="text-center mt-5">
+                                    <h5 className={project.project_description_english_list1.length === 0 ? "d-flex align-items-center justify-content-center text-center m-btn" : "mt-5 text-center"}>
                                         {project.link !== "" ? 
                                             <a href={project.link} target="_blank" rel="noreferrer" className="text-white text-decoration-none border border-white py-2 px-5">
                                                 {lang.link_project || uploadLang.link_project}
