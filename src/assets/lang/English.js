@@ -11,7 +11,7 @@ export const english = {
     projects : "Projects",
     contact_nav : "Contact",
     //banner
-    text_banner1 : "Discover Aymane Web-Dev's world where your digital ideas\n Transform into captivating web and mobile experiences",
+    text_banner1 : "Discover Aymane Web-Dev's world where your digital\n Ideas transform into captivating web and mobile experiences",
     text_banner2 : "Unlock your online potential with\n An expert web and mobile developer",
     text_banner3 : "Let's craft a stunning Web and mobile application\n That goes beyond just an online presence.",
     button_banner : "Choose your service",
