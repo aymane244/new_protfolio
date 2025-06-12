@@ -87,7 +87,7 @@ export const serviceDescription = [
         service_bug_stacks_english : "My main stacks are Javascript, Reactjs, React Native, PHP, Laravel, JAVA, JEE, Python, FastApi",
         service_french : "Maintenance site web",
         service_description_french : "Réparation de problèmes de site web pour un succès ininterrompu !",
-        service_bug_stacks_fernch: "Mes principales compétences sont les suivantes : Javascript, Reactjs, React Native, PHP, Laravel, JAVA, JEE, Python, FastApi",
+        service_bug_stacks_fernch: "Mes compétences sont les suivantes : Javascript, Reactjs, React Native, PHP, Laravel, JAVA, JEE, Python, FastApi",
         service_arabic : "صيانة الموقع الإلكتروني",
         service_description_arabic : "إصلاح مشاكل الموقع لتحقيق النجاح السلس!",
         service_bug_stacks_arabic : "أبرز التقنيات التي أتقنها: Javascript, Reactjs, React Native, PHP, Laravel, JAVA, JEE, Python, FastApi",

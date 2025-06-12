@@ -11,9 +11,9 @@ export const french = {
     projects : "Projets",
     contact_nav : "Contactez-moi",
     //banner
-    text_banner1 : "Découvrez l'univers d'Aymane Web-Dev Où vos idées numériques\n se transforment en expériences web et mobiles captivantes",
+    text_banner1 : "Découvrez l'univers d'Aymane Web-Dev Où vos idées numériques se transforment en expériences web et mobiles captivantes",
     text_banner2 : "Libérez votre potentiel en ligne avec\n Un développeur web and mobile expert",
-    text_banner3 : "Créons ensemble une application web et mobile prodigieuse\n Qui va bien au-delà d'une simple présence en ligne.",
+    text_banner3 : "Créons ensemble une application web et mobile prodigieuse Qui va bien au-delà d'une simple présence en ligne.",
     button_banner : "Choisir votre service",
     // modal
     service_title : "Service",
