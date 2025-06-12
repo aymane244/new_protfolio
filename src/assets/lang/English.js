@@ -11,9 +11,9 @@ export const english = {
     projects : "Projects",
     contact_nav : "Contact",
     //banner
-    text_banner1 : "Welcome to Aymane Web-Dev's website\nWhere digital dreams come to life",
-    text_banner2 : "Unlock your online potential \nWith an expert web developer",
-    text_banner3 : "Ready to elevate your web presence ? \nLet's build something extraordinary together.",
+    text_banner1 : "Discover Aymane Web-Dev's world where your digital ideas\n Transform into captivating web and mobile experiences",
+    text_banner2 : "Unlock your online potential with\n An expert web and mobile developer",
+    text_banner3 : "Let's craft a stunning Web and mobile application\n That goes beyond just an online presence.",
     button_banner : "Choose your service",
     // modal
     service_title : "Service",
@@ -53,7 +53,7 @@ export const english = {
     seo_service : "SEO Optimization",
     admin_service : "Admin page (Dashbaord page, add, update, delete elements)",
     other_service : "Comment",
-    other_discuss : "Write comment or add other functionalities",
+    other_discuss : "Write a comment or add other functionalities",
     error : "An error occurred",
     error_language : "All the languages fields are required",
     //service price
@@ -76,11 +76,11 @@ export const english = {
     //about page
     about_header : "ABOUT ME",
     about_text : "Hello, I'm Aymane Chnaif, and I'm passionate about turning digital ideas into reality.",
-    about_text2 : "With a dedicated focus on creating stunning websites and dynamic mobile applications, I have three years of proven experience in the world of full-stack web development and mobile app design.",
+    about_text2 : "With a dedicated focus on creating stunning websites and dynamic mobile applications, I have more than three years of proven experience in the world of full-stack web development and mobile app design.",
     about_text3 : "I'm excited to hear about your project ideas and discuss how I can help you achieve your goals. Whether it's a website revamp, a new mobile app, or anything in between, let's collaborate and bring your vision to life.",
     skills : "My key Skills",
     skill_fullStack : "Full-Stack Web Development",
-    skill_fullStack_text1 : "I specialize in building end-to-end web solutions, from concept and design to implementation and deployment.",
+    skill_fullStack_text1 : "I specialize in building end-to-end web solutions, from concept to implementation and deployment.",
     skill_fullStack_text2 : "My expertise spans both front-end and back-end technologies, allowing me to create seamless, user-friendly experiences.",
     skill_mobile : "Mobile Application Development",
     skill_mobile_text : "In addition to web development, I'm proficient in creating mobile applications for both iOS and Android platforms. Whether it's a native or cross-platform app, I have the skills to bring your mobile app idea to life.",
@@ -89,7 +89,7 @@ export const english = {
     skill_backEnd : "Back-end Development",
     skill_backEnd_text : "I have experience with server-side technologies, databases, and APIs. I build robust and scalable back-ends to support the functionality of web and mobile applications.",
     skill_ProblemSolving : "Problem Solving",
-    skill_ProblemSolving_text : "My analytical mindset and problem-solving skills allow me to tackle complex challenges efficiently and deliver innovative solutions.",
+    skill_ProblemSolving_text : "My strong analytical thinking and problem-solving abilities enable me to efficiently address complex challenges and develop creative, effective solutions.",
     // work with me section
     wokr_with_me : "WHY WORK WITH ME",
     quality_header : "Quality and Precision",
@@ -110,7 +110,7 @@ export const english = {
     hire : "LONG TERM PROJECTS",
     hire_text_1 : "This section is intended for those interested in long-term or medium-term projects, I'm excited to hear about your project ideas ",
     hire_text_2 : "and discuss how I can help you achieve your goals, feel free to reach out to me at the contact information below.",
-    forntEnd : "Front-end development Technologies and Design",
+    forntEnd : "Front-end development Technologies",
     backEnd : "Back-end development Technologies and Database",
     languages : "Languages Spoken",
     languages_arab : "Arabic",

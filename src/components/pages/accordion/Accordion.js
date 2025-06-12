@@ -14,11 +14,11 @@ export default function Accordion({getLang, lang, uploadLang}){
             <div className="accordion-item">
                 <h2 className="accordion-header" onClick={()=>setShowSkill1(!showSkill1)}>
                     <button 
-                        className={getLang === "ar" ? "accordion-button accordion-button-ar collapsed" : "accordion-button collapsed"} 
+                        className={getLang === "ar" ? "accordion-button accordion-button-ar" : "accordion-button"} 
                         type="button" 
                         data-bs-toggle="collapse" 
                         data-bs-target="#panelsStayOpen-collapseOne" 
-                        aria-expanded="false" 
+                        aria-expanded="true" 
                         aria-controls="panelsStayOpen-collapseOne"
                     >
                         <div className={getLang === "ar" ? "d-flex justify-content-between w-100" : ""}>
@@ -37,8 +37,8 @@ export default function Accordion({getLang, lang, uploadLang}){
                         </div>
                     </button>
                 </h2>
-                <div id="panelsStayOpen-collapseOne" className="accordion-collapse collapse">
-                    <div className="accordion-body text-start text-justify">
+                <div id="panelsStayOpen-collapseOne" className="accordion-collapse collapse show">
+                    <div className={`accordion-body ${getLang === "ar" ? "text-end" : "text-start"} text-justify`}>
                         <strong>
                             {lang.skill_fullStack_text1 || uploadLang.skill_fullStack_text1}<br/>
                             {lang.skill_fullStack_text2 || uploadLang.skill_fullStack_text2}
@@ -49,11 +49,11 @@ export default function Accordion({getLang, lang, uploadLang}){
             <div className="accordion-item">
                 <h2 className="accordion-header" onClick={()=>setShowSkill2(!showSkill2)}>
                     <button 
-                        className={getLang === "ar" ? "accordion-button accordion-button-ar collapsed" : "accordion-button collapsed"}
+                        className={getLang === "ar" ? "accordion-button accordion-button-ar" : "accordion-button"}
                         type="button" 
                         data-bs-toggle="collapse" 
                         data-bs-target="#panelsStayOpen-collapseTwo" 
-                        aria-expanded="false" 
+                        aria-expanded="true" 
                         aria-controls="panelsStayOpen-collapseTwo"
                     >
                         <div className={getLang === "ar" ? "d-flex justify-content-between w-100" : ""}>
@@ -72,8 +72,8 @@ export default function Accordion({getLang, lang, uploadLang}){
                         </div>
                     </button>
                 </h2>
-                <div id="panelsStayOpen-collapseTwo" className="accordion-collapse collapse">
-                    <div className="accordion-body text-start text-justify">
+                <div id="panelsStayOpen-collapseTwo" className="accordion-collapse collapse show">
+                    <div className={`accordion-body ${getLang === "ar" ? "text-end" : "text-start"} text-justify`}>
                         <strong>{lang.skill_mobile_text || uploadLang.skill_mobile_text}</strong> 
                     </div>
                 </div>
@@ -81,11 +81,11 @@ export default function Accordion({getLang, lang, uploadLang}){
             <div className="accordion-item">
                 <h2 className="accordion-header" onClick={()=>setShowSkill3(!showSkill3)}>
                     <button 
-                        className={getLang === "ar" ? "accordion-button accordion-button-ar collapsed" : "accordion-button collapsed"}
+                        className={getLang === "ar" ? "accordion-button accordion-button-ar" : "accordion-button"}
                         type="button" 
                         data-bs-toggle="collapse" 
                         data-bs-target="#panelsStayOpen-collapseThree" 
-                        aria-expanded="false" 
+                        aria-expanded="true" 
                         aria-controls="panelsStayOpen-collapseThree"
                     >
                         <div className={getLang === "ar" ? "d-flex justify-content-between w-100" : ""}>
@@ -102,8 +102,8 @@ export default function Accordion({getLang, lang, uploadLang}){
                         </div>
                     </button>
                 </h2>
-                <div id="panelsStayOpen-collapseThree" className="accordion-collapse collapse">
-                    <div className="accordion-body text-start text-justify">
+                <div id="panelsStayOpen-collapseThree" className="accordion-collapse collapse  show">
+                    <div className={`accordion-body ${getLang === "ar" ? "text-end" : "text-start"} text-justify`}>
                         <strong>{lang.skill_responsive_text || uploadLang.skill_responsive_text}</strong> 
                     </div>
                 </div>
@@ -111,11 +111,11 @@ export default function Accordion({getLang, lang, uploadLang}){
             <div className="accordion-item">
                 <h2 className="accordion-header" onClick={()=>setShowSkill4(!showSkill4)}>
                     <button 
-                        className={getLang === "ar" ? "accordion-button accordion-button-ar collapsed" : "accordion-button collapsed"} 
+                        className={getLang === "ar" ? "accordion-button accordion-button-ar" : "accordion-button"} 
                         type="button" 
                         data-bs-toggle="collapse" 
                         data-bs-target="#panelsStayOpen-collapseFour" 
-                        aria-expanded="false" 
+                        aria-expanded="true" 
                         aria-controls="panelsStayOpen-collapseFour"
                     >
                         <div className={getLang === "ar" ? "d-flex justify-content-between w-100" : ""}>
@@ -132,8 +132,8 @@ export default function Accordion({getLang, lang, uploadLang}){
                         </div>
                     </button>
                 </h2>
-                <div id="panelsStayOpen-collapseFour" className="accordion-collapse collapse">
-                    <div className="accordion-body text-start text-justify">
+                <div id="panelsStayOpen-collapseFour" className="accordion-collapse collapse show">
+                    <div className={`accordion-body ${getLang === "ar" ? "text-end" : "text-start"} text-justify`}>
                         <strong>{lang.skill_backEnd_text || uploadLang.skill_backEnd_text}</strong> 
                     </div>
                 </div>
@@ -141,11 +141,11 @@ export default function Accordion({getLang, lang, uploadLang}){
             <div className="accordion-item">
                 <h2 className="accordion-header" onClick={()=>setShowSkill5(!showSkill5)}>
                     <button 
-                        className={getLang === "ar" ? "accordion-button accordion-button-ar collapsed" : "accordion-button collapsed"}
+                        className={getLang === "ar" ? "accordion-button accordion-button-ar" : "accordion-button"}
                         type="button" 
                         data-bs-toggle="collapse" 
                         data-bs-target="#panelsStayOpen-collapseFive" 
-                        aria-expanded="false" 
+                        aria-expanded="true" 
                         aria-controls="panelsStayOpen-collapseFive"
                     >
                         <div className={getLang === "ar" ? "d-flex justify-content-between w-100" : ""}>
@@ -162,8 +162,8 @@ export default function Accordion({getLang, lang, uploadLang}){
                         </div>
                     </button>
                 </h2>
-                <div id="panelsStayOpen-collapseFive" className="accordion-collapse collapse">
-                    <div className="accordion-body text-start text-justify">
+                <div id="panelsStayOpen-collapseFive" className="accordion-collapse collapse show">
+                    <div className={`accordion-body ${getLang === "ar" ? "text-end" : "text-start"} text-justify`}>
                         <strong>{lang.skill_ProblemSolving_text || uploadLang.skill_ProblemSolving_text}</strong> 
                     </div>
                 </div>

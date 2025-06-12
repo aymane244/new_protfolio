@@ -1,4 +1,3 @@
-import React from "react";
 import { faCheckDouble, faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
@@ -12,11 +11,11 @@ export default function AccordionLanguages({getLang, lang, uploadLang}){
             <div className="accordion-item">
                 <h2 className="accordion-header" onClick={()=>setShowSkill1(!showSkill1)}>
                     <button 
-                        className={getLang === "ar" ? "accordion-button accordion-button-ar collapsed" : "accordion-button collapsed"} 
+                        className={getLang === "ar" ? "accordion-button accordion-button-ar" : "accordion-button"} 
                         type="button" 
                         data-bs-toggle="collapse" 
                         data-bs-target="#panelsStayOpen-collapseSix" 
-                        aria-expanded="false" 
+                        aria-expanded="true" 
                         aria-controls="panelsStaySix-collapseSix"
                     >
                         <div className={getLang === "ar" ? "d-flex justify-content-between w-100" : ""}>
@@ -35,10 +34,10 @@ export default function AccordionLanguages({getLang, lang, uploadLang}){
                         </div>
                     </button>
                 </h2>
-                <div id="panelsStayOpen-collapseSix" className="accordion-collapse collapse">
+                <div id="panelsStayOpen-collapseSix" className="accordion-collapse collapse show">
                     <div className="accordion-body text-start text-justify">
                         <ul>
-                            <li><strong>HTML, CSS, Bootstrap</strong></li>
+                            <li><strong>HTML, CSS, Bootstrap, TailwindCSS</strong></li>
                             <li><strong>JavaScript, Jquery, Ajax</strong></li>
                             <li><strong>ReactJs, React Native</strong></li>
                             <li><strong>PhotoShop</strong></li>
@@ -49,11 +48,11 @@ export default function AccordionLanguages({getLang, lang, uploadLang}){
             <div className="accordion-item">
                 <h2 className="accordion-header" onClick={()=>setShowSkill2(!showSkill2)}>
                     <button 
-                        className={getLang === "ar" ? "accordion-button accordion-button-ar collapsed" : "accordion-button collapsed"}
+                        className={getLang === "ar" ? "accordion-button accordion-button-ar" : "accordion-button"}
                         type="button" 
                         data-bs-toggle="collapse" 
                         data-bs-target="#panelsStayOpen-collapseSeven" 
-                        aria-expanded="false" 
+                        aria-expanded="true" 
                         aria-controls="panelsStayOpen-collapseSeven"
                     >
                         <div className={getLang === "ar" ? "d-flex justify-content-between w-100" : ""}>
@@ -72,12 +71,12 @@ export default function AccordionLanguages({getLang, lang, uploadLang}){
                         </div>
                     </button>
                 </h2>
-                <div id="panelsStayOpen-collapseSeven" className="accordion-collapse collapse">
+                <div id="panelsStayOpen-collapseSeven" className="accordion-collapse collapse show">
                     <div className="accordion-body text-start text-justify">
                         <ul>
-                            <li><strong>PHP, Laravel, JAVA, JEE</strong></li>
+                            <li><strong>PHP, Laravel, JAVA, JEE, Python, FastAPI</strong></li>
                             <li><strong>Wordpress (plugins)</strong></li>
-                            <li><strong>SQL, MySQL</strong></li>
+                            <li><strong>SQL, MySQL, PostgreSQL</strong></li>
                         </ul>
                     </div>
                 </div>
@@ -85,11 +84,11 @@ export default function AccordionLanguages({getLang, lang, uploadLang}){
             <div className="accordion-item">
                 <h2 className="accordion-header" onClick={()=>setShowSkill3(!showSkill3)}>
                     <button 
-                        className={getLang === "ar" ? "accordion-button accordion-button-ar collapsed" : "accordion-button collapsed"}
+                        className={getLang === "ar" ? "accordion-button accordion-button-ar" : "accordion-button"}
                         type="button" 
                         data-bs-toggle="collapse" 
                         data-bs-target="#panelsStayOpen-collapseEight" 
-                        aria-expanded="false" 
+                        aria-expanded="true" 
                         aria-controls="panelsStayOpen-collapseEight"
                     >
                         <div className={getLang === "ar" ? "d-flex justify-content-between w-100" : ""}>
@@ -106,7 +105,7 @@ export default function AccordionLanguages({getLang, lang, uploadLang}){
                         </div>
                     </button>
                 </h2>
-                <div id="panelsStayOpen-collapseEight" className="accordion-collapse collapse">
+                <div id="panelsStayOpen-collapseEight" className="accordion-collapse collapse show">
                     <div className="accordion-body text-start text-justify">
                         <ul>
                             <li><strong>{lang.languages_arab || uploadLang.languages_arab} ({lang.languages_native || uploadLang.languages_native})</strong></li>
